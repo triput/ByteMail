@@ -12,7 +12,7 @@
         android:id="@+id/widget_brand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ByteMail"
+        android:text="Synesis"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold" />

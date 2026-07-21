@@ -7,11 +7,11 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/drift/drift_account_folder_store.dart';
-import 'package:bytemail/repository/drift/drift_mappers.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/drift/drift_account_folder_store.dart';
+import 'package:synesis/repository/drift/drift_mappers.dart';
 import 'package:drift/drift.dart';
 
 class DriftMessageStore {
@@ -22,7 +22,7 @@ class DriftMessageStore {
   }) : _notify = notify,
        _folders = folders;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
   final DriftAccountFolderStore _folders;
 

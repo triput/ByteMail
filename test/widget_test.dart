@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:bytemail/account/account_service.dart';
-import 'package:bytemail/app.dart';
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/custom_theme.dart';
+import 'package:synesis/account/account_service.dart';
+import 'package:synesis/app.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/custom_theme.dart';
 
 class _FakeRepo implements MailRepository {
   @override
@@ -417,7 +417,7 @@ class _FakeRepo implements MailRepository {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('ByteMail shell renders Unified Inbox', (tester) async {
+  testWidgets('Synesis shell renders Unified Inbox', (tester) async {
     SharedPreferences.setMockInitialValues({});
     final prefs = await SharedPreferences.getInstance();
     final repo = _FakeRepo();
@@ -442,7 +442,7 @@ void main() {
     addTearDown(view.resetDevicePixelRatio);
 
     await tester.pumpWidget(
-      ByteMailApp(
+      SynesisApp(
         prefs: prefs,
         repository: repo,
         syncEngine: syncEngine,
@@ -453,7 +453,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    expect(find.text('bytemail'), findsOneWidget);
+    expect(find.text('synesis'), findsOneWidget);
     expect(find.textContaining('Unified'), findsWidgets);
     expect(find.text('Maya Chen'), findsOneWidget);
   });

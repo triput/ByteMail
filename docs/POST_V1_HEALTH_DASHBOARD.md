@@ -10,9 +10,9 @@
 
 ## Vision
 
-A lightweight **project health dashboard** spun up **after V1 ship**, while the operator dogfoods ByteMail. It aggregates development and quality signals into one place so progress and risk are visible without digging through markdown and CSVs by hand.
+A lightweight **project health dashboard** spun up **after V1 ship**, while the operator dogfoods Synesis. It aggregates development and quality signals into one place so progress and risk are visible without digging through markdown and CSVs by hand.
 
-This is **meta / adjacent tooling** — intended to be **reusable across ByteMail and future projects**, not a ByteMail mail-client feature.
+This is **meta / adjacent tooling** — intended to be **reusable across Synesis and future projects**, not a Synesis mail-client feature.
 
 ## Intended surfaces
 
@@ -41,12 +41,12 @@ Design adapters so another repo can point at its own:
 - test-inventory CSV schema
 - (later) perf catalog
 
-ByteMail is the first consumer, not the only one.
+Synesis is the first consumer, not the only one.
 
 ## Non-goals
 
 - **Not** a V1 deliverable or Final-wave phase
-- **Not** a mail product feature (no in-app ByteMail UI requirement)
+- **Not** a mail product feature (no in-app Synesis UI requirement)
 - **Does not** block V1 exit, FW-1…FW-6, or dogfood start
 - **No implementation** in this stub — docs only until post-V1 kickoff
 

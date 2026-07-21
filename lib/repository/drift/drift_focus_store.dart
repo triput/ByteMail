@@ -7,9 +7,9 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift/drift_mappers.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift/drift_mappers.dart';
 import 'package:drift/drift.dart';
 
 class DriftFocusStore {
@@ -18,7 +18,7 @@ class DriftFocusStore {
     required void Function() notify,
   }) : _notify = notify;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
 
   Future<List<FocusRule>> listFocusRules({String? accountId}) async {

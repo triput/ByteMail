@@ -1,14 +1,14 @@
 // ==============================================================================
 // File: test/theme_tokens_test.dart
-// Description: Regression coverage for ByteMail's built-in theme token packs.
+// Description: Regression coverage for Synesis's built-in theme token packs.
 // Component: Test / UI Theme
 // Version: 1.0 (Gold Master)
 // Created: 2026-07-16
 // Last Update: 2026-07-16
 // ==============================================================================
 
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

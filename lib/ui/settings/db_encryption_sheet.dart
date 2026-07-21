@@ -13,11 +13,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:bytemail/desktop/windows_desktop_controller.dart';
-import 'package:bytemail/repository/db_encryption_config.dart';
-import 'package:bytemail/repository/db_encryption_migrator.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/desktop/windows_desktop_controller.dart';
+import 'package:synesis/repository/db_encryption_config.dart';
+import 'package:synesis/repository/db_encryption_migrator.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Shows the "Encrypt local database" settings sheet.
 Future<void> showDbEncryptionSheet(BuildContext context) {
@@ -118,7 +118,7 @@ class _DbEncryptionSheetState extends State<_DbEncryptionSheet> {
           builder: (BuildContext dialogContext) => AlertDialog(
             title: const Text('Turn off encryption?'),
             content: const Text(
-              'ByteMail will decrypt the local mailbox back to plain '
+              'Synesis will decrypt the local mailbox back to plain '
               'SQLite. This does not affect your mail on the server.',
             ),
             actions: <Widget>[
@@ -187,7 +187,7 @@ class _DbEncryptionSheetState extends State<_DbEncryptionSheet> {
       builder: (BuildContext dialogContext) => AlertDialog(
         title: const Text('Restart required'),
         content: const Text(
-          'ByteMail must restart to reopen the mailbox with this change '
+          'Synesis must restart to reopen the mailbox with this change '
           'applied.',
         ),
         actions: <Widget>[
@@ -335,7 +335,7 @@ class _EnableEncryptionDialogState extends State<_EnableEncryptionDialog> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
-              'ByteMail will re-encrypt the mailbox database on this '
+              'Synesis will re-encrypt the mailbox database on this '
               'device with the passphrase below. There is no recovery '
               'mechanism: if you forget it, the local mailbox cannot be '
               'unlocked and you will need to remove and re-add your '

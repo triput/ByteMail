@@ -8,10 +8,10 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/address_match_scope.dart';
-import 'package:bytemail/focus/focus_sender.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/domain/address_match_scope.dart';
+import 'package:synesis/focus/focus_sender.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Shared sender/domain menu entries for all address-scope controls.
 List<PopupMenuEntry<AddressMatchScope>> buildAddressScopeMenuItems(

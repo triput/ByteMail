@@ -8,10 +8,10 @@
 // ==============================================================================
 
 import 'package:equatable/equatable.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mailbox/message_list_projector.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mailbox/message_list_projector.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/settings/app_settings_state.dart';
 
 /// Sidebar / toolbar virtual folders that are not real IMAP/Graph folders.
 enum MailboxVirtualView {

@@ -9,13 +9,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/ui/common/empty_state.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/sync/sync_engine.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/ui/common/empty_state.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/sync/sync_engine.dart';
 
 Future<void> showSearchSheet(
   BuildContext context, {

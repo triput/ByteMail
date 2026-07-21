@@ -9,11 +9,11 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sample_mailbox.dart';
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/drift/drift_account_folder_store.dart';
-import 'package:bytemail/repository/drift/drift_message_store.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sample_mailbox.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/drift/drift_account_folder_store.dart';
+import 'package:synesis/repository/drift/drift_message_store.dart';
 import 'package:drift/drift.dart';
 
 class DriftWidgetDiagnosticsStore {
@@ -26,7 +26,7 @@ class DriftWidgetDiagnosticsStore {
        _accounts = accounts,
        _messages = messages;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
   final DriftAccountFolderStore _accounts;
   final DriftMessageStore _messages;

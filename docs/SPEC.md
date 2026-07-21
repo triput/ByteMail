@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# ByteMail Technical Specification
+# Synesis Technical Specification
 
 | Field | Value |
 | --- | --- |
@@ -15,7 +15,7 @@
 
 ## 1. Overview
 
-ByteMail is a local-first email client for Windows and Android, built with Flutter (Dart). The UI reads exclusively from a local SQLite cache. A background sync engine updates that cache over Microsoft Graph (Outlook/Exchange) or IMAP/SMTP (Google and independent accounts), so transient network failures do not block reading or composing against already-synced mail.
+Synesis is a local-first email client for Windows and Android, built with Flutter (Dart). The UI reads exclusively from a local SQLite cache. A background sync engine updates that cache over Microsoft Graph (Outlook/Exchange) or IMAP/SMTP (Google and independent accounts), so transient network failures do not block reading or composing against already-synced mail.
 
 ### 1.1 Goals
 
@@ -35,7 +35,7 @@ ByteMail is a local-first email client for Windows and Android, built with Flutt
 - Full contacts and calendar (CardDAV/CalDAV or provider-native equivalents) as a product surface — planned for a future version; explicitly out of scope for v1 (see §12).
 - Exchange ActiveSync (EAS), full MAPI, or proprietary Outlook offline protocols outside Graph.
 - End-to-end PGP or S/MIME unless explicitly added in a later milestone.
-- Server-side ByteMail hosting or ByteMail-operated mail servers.
+- Server-side Synesis hosting or Synesis-operated mail servers.
 - Built-in cloud AI drafting, summarization, or cloud-side ranking (on-device scoring hooks may exist; see §8.3).
 - Replacing provider web UIs for files or non-mail productivity surfaces.
 
@@ -623,7 +623,7 @@ Concrete package versions and IMAP client library selection are left to implemen
 8. **Account color assignment:** Confirm UX for picker vs curated swatches only.
 9. **Theme completeness:** Confirm widget theming depth on Android for all five themes in v1 vs Dark+Black first.
 10. **Multi-account limits:** Soft/hard cap on concurrent accounts per install?
-11. **Licensing / branding:** Public product name confirmed as “ByteMail”?
+11. **Licensing / branding:** Public product name confirmed as “Synesis”?
 
 ---
 

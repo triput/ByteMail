@@ -25,9 +25,9 @@ class DbEncryptionConfig {
     : _prefs = prefs,
       _secureStorage = secureStorage ?? const FlutterSecureStorage();
 
-  static const String _enabledPrefsKey = 'bytemail.db_encryption.enabled_v1';
+  static const String _enabledPrefsKey = 'synesis.db_encryption.enabled_v1';
   static const String _passphraseSecureKey =
-      'bytemail:db_encryption:passphrase';
+      'synesis:db_encryption:passphrase';
 
   final SharedPreferences? _prefs;
   final FlutterSecureStorage _secureStorage;
@@ -113,7 +113,7 @@ class DbEncryptionPaths {
   const DbEncryptionPaths._();
 
   /// File name of the primary application database.
-  static const String databaseFileName = 'bytemail.sqlite';
+  static const String databaseFileName = 'synesis.sqlite';
 
   /// Full path to the primary database file inside [supportDirectoryPath].
   static String databasePath(String supportDirectoryPath) =>

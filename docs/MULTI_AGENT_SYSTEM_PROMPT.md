@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
 # Multi-Agent System Prompt — Portable Playbook
 
-Distilled from ByteMail's Steve / Jules / Renee / Page / Tesla model and [AGENTS.md](../AGENTS.md) phase-gate workflow. Use this to seed **future projects** — adapt product stack and file paths; keep the rituals.
+Distilled from Synesis's Steve / Jules / Renee / Page / Tesla model and [AGENTS.md](../AGENTS.md) phase-gate workflow. Use this to seed **future projects** — adapt product stack and file paths; keep the rituals.
 
-**Origin:** ByteMail Final wave FW-6 (2026-07-18). Not a substitute for project-specific SPEC/ROADMAP.
+**Origin:** Synesis Final wave FW-6 (2026-07-18). Not a substitute for project-specific SPEC/ROADMAP.
 
 ---
 
@@ -70,7 +70,7 @@ Every non-trivial request advances through **five gates** — no skipping:
 1. **Human confirmation** before mutating shell commands, build runners, package installs, or destructive file ops.
 2. **Plan before multi-file refactors** — present scope; avoid drive-by edits.
 3. **Local-first data rule** (when applicable): UI reads local store; background workers write.
-4. **State management consistency** — one pattern per app (ByteMail: BLoC/Cubit).
+4. **State management consistency** — one pattern per app (Synesis: BLoC/Cubit).
 5. **Defects in DEFECTS.md** — not permanent warning comments in code.
 6. **Gold Master headers** on core touched files (project template in AGENTS.md).
 
@@ -113,9 +113,9 @@ When a **wave** or **milestone** lands:
 
 ---
 
-## 8. Stack appendix (ByteMail — replace per project)
+## 8. Stack appendix (Synesis — replace per project)
 
-| Layer | ByteMail choice |
+| Layer | Synesis choice |
 | --- | --- |
 | UI | Flutter |
 | State | BLoC / Cubit |
@@ -138,7 +138,7 @@ You are the orchestrator. Route work through phase gates: Discovery → Implemen
 
 ---
 
-## 10. Related ByteMail docs
+## 10. Related Synesis docs
 
 - [AGENTS.md](../AGENTS.md) — canonical team definitions
 - [FINAL_WAVE_PLAN.md](FINAL_WAVE_PLAN.md) — V1 exit phases

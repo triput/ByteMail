@@ -17,7 +17,7 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_windows/webview_flutter_windows.dart' as win;
-import 'package:bytemail/ui/shell/html_email_document.dart';
+import 'package:synesis/ui/shell/html_email_document.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 /// True when platform WebView init failed and we should render via HtmlWidget.

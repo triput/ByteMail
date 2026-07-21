@@ -10,7 +10,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:bytemail/auth/oauth_redirect_capture.dart';
+import 'package:synesis/auth/oauth_redirect_capture.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

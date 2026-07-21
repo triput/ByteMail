@@ -1,5 +1,5 @@
-import 'package:bytemail/desktop/message_print_service.dart';
-import 'package:bytemail/domain/models.dart';
+import 'package:synesis/desktop/message_print_service.dart';
+import 'package:synesis/domain/models.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pdf/pdf.dart';
 
@@ -14,7 +14,7 @@ void main() {
       fromAddress: 'ada@example.com',
       subject: 'Printable message',
       snippet: 'Hello',
-      body: '<p>Hello <strong>from ByteMail</strong>.</p>',
+      body: '<p>Hello <strong>from Synesis</strong>.</p>',
       whenLabel: 'Today',
       bucket: FocusBucket.focused,
     );

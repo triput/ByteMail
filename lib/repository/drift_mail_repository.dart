@@ -9,23 +9,23 @@
 
 import 'dart:async';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/database.dart'
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/database.dart'
     hide CustomTheme, FocusRule, SyncProfile;
-import 'package:bytemail/repository/drift/drift_account_folder_store.dart';
-import 'package:bytemail/repository/drift/drift_compose_store.dart';
-import 'package:bytemail/repository/drift/drift_custom_theme_store.dart';
-import 'package:bytemail/repository/drift/drift_focus_store.dart';
-import 'package:bytemail/repository/drift/drift_message_store.dart';
-import 'package:bytemail/repository/drift/drift_outbox_store.dart';
-import 'package:bytemail/repository/drift/drift_sync_job_store.dart';
-import 'package:bytemail/repository/drift/drift_sync_profile_store.dart';
-import 'package:bytemail/repository/drift/drift_widget_diagnostics_store.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/custom_theme.dart';
+import 'package:synesis/repository/drift/drift_account_folder_store.dart';
+import 'package:synesis/repository/drift/drift_compose_store.dart';
+import 'package:synesis/repository/drift/drift_custom_theme_store.dart';
+import 'package:synesis/repository/drift/drift_focus_store.dart';
+import 'package:synesis/repository/drift/drift_message_store.dart';
+import 'package:synesis/repository/drift/drift_outbox_store.dart';
+import 'package:synesis/repository/drift/drift_sync_job_store.dart';
+import 'package:synesis/repository/drift/drift_sync_profile_store.dart';
+import 'package:synesis/repository/drift/drift_widget_diagnostics_store.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/custom_theme.dart';
 
 class DriftMailRepository implements MailRepository {
   DriftMailRepository(this._database)
@@ -55,7 +55,7 @@ class DriftMailRepository implements MailRepository {
     );
   }
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final StreamController<void> _changes;
 
   late final DriftAccountFolderStore _accounts;

@@ -7,7 +7,7 @@
 // Last Update: 2026-07-16
 // ==============================================================================
 
-import 'package:bytemail/account/imap_autoconfig.dart';
+import 'package:synesis/account/imap_autoconfig.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 const String _gmailLikeXml = '''

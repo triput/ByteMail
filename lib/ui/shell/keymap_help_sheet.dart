@@ -7,11 +7,11 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:flutter/material.dart';
 
-/// Shows the documented ByteMail workspace keymap.
+/// Shows the documented Synesis workspace keymap.
 Future<void> showKeymapHelpSheet(BuildContext context) {
   return showModalBottomSheet<void>(
     context: context,

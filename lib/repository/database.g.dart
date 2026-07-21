@@ -7975,9 +7975,9 @@ class CustomThemesCompanion extends UpdateCompanion<CustomTheme> {
   }
 }
 
-abstract class _$ByteMailDatabase extends GeneratedDatabase {
-  _$ByteMailDatabase(QueryExecutor e) : super(e);
-  $ByteMailDatabaseManager get managers => $ByteMailDatabaseManager(this);
+abstract class _$SynesisDatabase extends GeneratedDatabase {
+  _$SynesisDatabase(QueryExecutor e) : super(e);
+  $SynesisDatabaseManager get managers => $SynesisDatabaseManager(this);
   late final $AccountsTable accounts = $AccountsTable(this);
   late final $FoldersTable folders = $FoldersTable(this);
   late final $MessagesTable messages = $MessagesTable(this);
@@ -8054,11 +8054,11 @@ typedef $$AccountsTableUpdateCompanionBuilder =
     });
 
 final class $$AccountsTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $AccountsTable, Account> {
+    extends BaseReferences<_$SynesisDatabase, $AccountsTable, Account> {
   $$AccountsTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
   static MultiTypedResultKey<$FoldersTable, List<Folder>> _foldersRefsTable(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.folders,
     aliasName: 'accounts__id__folders__account_id',
@@ -8077,7 +8077,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$MessagesTable, List<Message>> _messagesRefsTable(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.messages,
     aliasName: 'accounts__id__messages__account_id',
@@ -8096,7 +8096,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$FocusRulesTable, List<FocusRule>>
-  _focusRulesRefsTable(_$ByteMailDatabase db) => MultiTypedResultKey.fromTable(
+  _focusRulesRefsTable(_$SynesisDatabase db) => MultiTypedResultKey.fromTable(
     db.focusRules,
     aliasName: 'accounts__id__focus_rules__account_id',
   );
@@ -8114,7 +8114,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$OutboxTable, List<OutboxData>> _outboxRefsTable(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.outbox,
     aliasName: 'accounts__id__outbox__account_id',
@@ -8133,7 +8133,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$JobsTable, List<Job>> _jobsRefsTable(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.jobs,
     aliasName: 'accounts__id__sync_jobs__account_id',
@@ -8152,7 +8152,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$SyncCursorsTable, List<SyncCursor>>
-  _syncCursorsRefsTable(_$ByteMailDatabase db) => MultiTypedResultKey.fromTable(
+  _syncCursorsRefsTable(_$SynesisDatabase db) => MultiTypedResultKey.fromTable(
     db.syncCursors,
     aliasName: 'accounts__id__sync_cursors__account_id',
   );
@@ -8170,7 +8170,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$AttachmentsTable, List<Attachment>>
-  _attachmentsRefsTable(_$ByteMailDatabase db) => MultiTypedResultKey.fromTable(
+  _attachmentsRefsTable(_$SynesisDatabase db) => MultiTypedResultKey.fromTable(
     db.attachments,
     aliasName: 'accounts__id__attachments__account_id',
   );
@@ -8188,7 +8188,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$AttachmentBlobsTable, List<AttachmentBlob>>
-  _attachmentBlobsRefsTable(_$ByteMailDatabase db) =>
+  _attachmentBlobsRefsTable(_$SynesisDatabase db) =>
       MultiTypedResultKey.fromTable(
         db.attachmentBlobs,
         aliasName: 'accounts__id__attachment_blobs__account_id',
@@ -8209,7 +8209,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$AccountSignaturesTable, List<AccountSignature>>
-  _accountSignaturesRefsTable(_$ByteMailDatabase db) =>
+  _accountSignaturesRefsTable(_$SynesisDatabase db) =>
       MultiTypedResultKey.fromTable(
         db.accountSignatures,
         aliasName: 'accounts__id__account_signatures__account_id',
@@ -8230,7 +8230,7 @@ final class $$AccountsTableReferences
   }
 
   static MultiTypedResultKey<$MessageTemplatesTable, List<MessageTemplate>>
-  _messageTemplatesRefsTable(_$ByteMailDatabase db) =>
+  _messageTemplatesRefsTable(_$SynesisDatabase db) =>
       MultiTypedResultKey.fromTable(
         db.messageTemplates,
         aliasName: 'accounts__id__message_templates__account_id',
@@ -8252,7 +8252,7 @@ final class $$AccountsTableReferences
 }
 
 class $$AccountsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $AccountsTable> {
+    extends Composer<_$SynesisDatabase, $AccountsTable> {
   $$AccountsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -8562,7 +8562,7 @@ class $$AccountsTableFilterComposer
 }
 
 class $$AccountsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $AccountsTable> {
+    extends Composer<_$SynesisDatabase, $AccountsTable> {
   $$AccountsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -8622,7 +8622,7 @@ class $$AccountsTableOrderingComposer
 }
 
 class $$AccountsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $AccountsTable> {
+    extends Composer<_$SynesisDatabase, $AccountsTable> {
   $$AccountsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -8929,7 +8929,7 @@ class $$AccountsTableAnnotationComposer
 class $$AccountsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AccountsTable,
           Account,
           $$AccountsTableFilterComposer,
@@ -8952,7 +8952,7 @@ class $$AccountsTableTableManager
             bool messageTemplatesRefs,
           })
         > {
-  $$AccountsTableTableManager(_$ByteMailDatabase db, $AccountsTable table)
+  $$AccountsTableTableManager(_$SynesisDatabase db, $AccountsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -9265,7 +9265,7 @@ class $$AccountsTableTableManager
 
 typedef $$AccountsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $AccountsTable,
       Account,
       $$AccountsTableFilterComposer,
@@ -9314,10 +9314,10 @@ typedef $$FoldersTableUpdateCompanionBuilder =
     });
 
 final class $$FoldersTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $FoldersTable, Folder> {
+    extends BaseReferences<_$SynesisDatabase, $FoldersTable, Folder> {
   $$FoldersTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('folders__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -9336,7 +9336,7 @@ final class $$FoldersTableReferences
 }
 
 class $$FoldersTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $FoldersTable> {
+    extends Composer<_$SynesisDatabase, $FoldersTable> {
   $$FoldersTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -9404,7 +9404,7 @@ class $$FoldersTableFilterComposer
 }
 
 class $$FoldersTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $FoldersTable> {
+    extends Composer<_$SynesisDatabase, $FoldersTable> {
   $$FoldersTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -9472,7 +9472,7 @@ class $$FoldersTableOrderingComposer
 }
 
 class $$FoldersTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $FoldersTable> {
+    extends Composer<_$SynesisDatabase, $FoldersTable> {
   $$FoldersTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -9534,7 +9534,7 @@ class $$FoldersTableAnnotationComposer
 class $$FoldersTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $FoldersTable,
           Folder,
           $$FoldersTableFilterComposer,
@@ -9546,7 +9546,7 @@ class $$FoldersTableTableManager
           Folder,
           PrefetchHooks Function({bool accountId})
         > {
-  $$FoldersTableTableManager(_$ByteMailDatabase db, $FoldersTable table)
+  $$FoldersTableTableManager(_$SynesisDatabase db, $FoldersTable table)
     : super(
         TableManagerState(
           db: db,
@@ -9656,7 +9656,7 @@ class $$FoldersTableTableManager
 
 typedef $$FoldersTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $FoldersTable,
       Folder,
       $$FoldersTableFilterComposer,
@@ -9726,10 +9726,10 @@ typedef $$MessagesTableUpdateCompanionBuilder =
     });
 
 final class $$MessagesTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $MessagesTable, Message> {
+    extends BaseReferences<_$SynesisDatabase, $MessagesTable, Message> {
   $$MessagesTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('messages__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -9747,7 +9747,7 @@ final class $$MessagesTableReferences
   }
 
   static MultiTypedResultKey<$AttachmentsTable, List<Attachment>>
-  _attachmentsRefsTable(_$ByteMailDatabase db) => MultiTypedResultKey.fromTable(
+  _attachmentsRefsTable(_$SynesisDatabase db) => MultiTypedResultKey.fromTable(
     db.attachments,
     aliasName: 'messages__id__attachments__message_id',
   );
@@ -9766,7 +9766,7 @@ final class $$MessagesTableReferences
 }
 
 class $$MessagesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $MessagesTable> {
+    extends Composer<_$SynesisDatabase, $MessagesTable> {
   $$MessagesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -9939,7 +9939,7 @@ class $$MessagesTableFilterComposer
 }
 
 class $$MessagesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $MessagesTable> {
+    extends Composer<_$SynesisDatabase, $MessagesTable> {
   $$MessagesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -10087,7 +10087,7 @@ class $$MessagesTableOrderingComposer
 }
 
 class $$MessagesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $MessagesTable> {
+    extends Composer<_$SynesisDatabase, $MessagesTable> {
   $$MessagesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -10238,7 +10238,7 @@ class $$MessagesTableAnnotationComposer
 class $$MessagesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $MessagesTable,
           Message,
           $$MessagesTableFilterComposer,
@@ -10250,7 +10250,7 @@ class $$MessagesTableTableManager
           Message,
           PrefetchHooks Function({bool accountId, bool attachmentsRefs})
         > {
-  $$MessagesTableTableManager(_$ByteMailDatabase db, $MessagesTable table)
+  $$MessagesTableTableManager(_$SynesisDatabase db, $MessagesTable table)
     : super(
         TableManagerState(
           db: db,
@@ -10449,7 +10449,7 @@ class $$MessagesTableTableManager
 
 typedef $$MessagesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $MessagesTable,
       Message,
       $$MessagesTableFilterComposer,
@@ -10481,10 +10481,10 @@ typedef $$FocusRulesTableUpdateCompanionBuilder =
     });
 
 final class $$FocusRulesTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $FocusRulesTable, FocusRule> {
+    extends BaseReferences<_$SynesisDatabase, $FocusRulesTable, FocusRule> {
   $$FocusRulesTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('focus_rules__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager? get accountId {
@@ -10503,7 +10503,7 @@ final class $$FocusRulesTableReferences
 }
 
 class $$FocusRulesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $FocusRulesTable> {
+    extends Composer<_$SynesisDatabase, $FocusRulesTable> {
   $$FocusRulesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -10556,7 +10556,7 @@ class $$FocusRulesTableFilterComposer
 }
 
 class $$FocusRulesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $FocusRulesTable> {
+    extends Composer<_$SynesisDatabase, $FocusRulesTable> {
   $$FocusRulesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -10609,7 +10609,7 @@ class $$FocusRulesTableOrderingComposer
 }
 
 class $$FocusRulesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $FocusRulesTable> {
+    extends Composer<_$SynesisDatabase, $FocusRulesTable> {
   $$FocusRulesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -10656,7 +10656,7 @@ class $$FocusRulesTableAnnotationComposer
 class $$FocusRulesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $FocusRulesTable,
           FocusRule,
           $$FocusRulesTableFilterComposer,
@@ -10668,7 +10668,7 @@ class $$FocusRulesTableTableManager
           FocusRule,
           PrefetchHooks Function({bool accountId})
         > {
-  $$FocusRulesTableTableManager(_$ByteMailDatabase db, $FocusRulesTable table)
+  $$FocusRulesTableTableManager(_$SynesisDatabase db, $FocusRulesTable table)
     : super(
         TableManagerState(
           db: db,
@@ -10766,7 +10766,7 @@ class $$FocusRulesTableTableManager
 
 typedef $$FocusRulesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $FocusRulesTable,
       FocusRule,
       $$FocusRulesTableFilterComposer,
@@ -10822,10 +10822,10 @@ typedef $$OutboxTableUpdateCompanionBuilder =
     });
 
 final class $$OutboxTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $OutboxTable, OutboxData> {
+    extends BaseReferences<_$SynesisDatabase, $OutboxTable, OutboxData> {
   $$OutboxTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('outbox__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -10844,7 +10844,7 @@ final class $$OutboxTableReferences
 }
 
 class $$OutboxTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $OutboxTable> {
+    extends Composer<_$SynesisDatabase, $OutboxTable> {
   $$OutboxTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -10957,7 +10957,7 @@ class $$OutboxTableFilterComposer
 }
 
 class $$OutboxTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $OutboxTable> {
+    extends Composer<_$SynesisDatabase, $OutboxTable> {
   $$OutboxTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -11070,7 +11070,7 @@ class $$OutboxTableOrderingComposer
 }
 
 class $$OutboxTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $OutboxTable> {
+    extends Composer<_$SynesisDatabase, $OutboxTable> {
   $$OutboxTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -11163,7 +11163,7 @@ class $$OutboxTableAnnotationComposer
 class $$OutboxTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $OutboxTable,
           OutboxData,
           $$OutboxTableFilterComposer,
@@ -11175,7 +11175,7 @@ class $$OutboxTableTableManager
           OutboxData,
           PrefetchHooks Function({bool accountId})
         > {
-  $$OutboxTableTableManager(_$ByteMailDatabase db, $OutboxTable table)
+  $$OutboxTableTableManager(_$SynesisDatabase db, $OutboxTable table)
     : super(
         TableManagerState(
           db: db,
@@ -11319,7 +11319,7 @@ class $$OutboxTableTableManager
 
 typedef $$OutboxTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $OutboxTable,
       OutboxData,
       $$OutboxTableFilterComposer,
@@ -11355,10 +11355,10 @@ typedef $$JobsTableUpdateCompanionBuilder =
     });
 
 final class $$JobsTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $JobsTable, Job> {
+    extends BaseReferences<_$SynesisDatabase, $JobsTable, Job> {
   $$JobsTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('sync_jobs__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -11377,7 +11377,7 @@ final class $$JobsTableReferences
 }
 
 class $$JobsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $JobsTable> {
+    extends Composer<_$SynesisDatabase, $JobsTable> {
   $$JobsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -11440,7 +11440,7 @@ class $$JobsTableFilterComposer
 }
 
 class $$JobsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $JobsTable> {
+    extends Composer<_$SynesisDatabase, $JobsTable> {
   $$JobsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -11503,7 +11503,7 @@ class $$JobsTableOrderingComposer
 }
 
 class $$JobsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $JobsTable> {
+    extends Composer<_$SynesisDatabase, $JobsTable> {
   $$JobsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -11560,7 +11560,7 @@ class $$JobsTableAnnotationComposer
 class $$JobsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $JobsTable,
           Job,
           $$JobsTableFilterComposer,
@@ -11572,7 +11572,7 @@ class $$JobsTableTableManager
           Job,
           PrefetchHooks Function({bool accountId})
         > {
-  $$JobsTableTableManager(_$ByteMailDatabase db, $JobsTable table)
+  $$JobsTableTableManager(_$SynesisDatabase db, $JobsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -11676,7 +11676,7 @@ class $$JobsTableTableManager
 
 typedef $$JobsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $JobsTable,
       Job,
       $$JobsTableFilterComposer,
@@ -11706,10 +11706,10 @@ typedef $$SyncCursorsTableUpdateCompanionBuilder =
     });
 
 final class $$SyncCursorsTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $SyncCursorsTable, SyncCursor> {
+    extends BaseReferences<_$SynesisDatabase, $SyncCursorsTable, SyncCursor> {
   $$SyncCursorsTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('sync_cursors__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -11728,7 +11728,7 @@ final class $$SyncCursorsTableReferences
 }
 
 class $$SyncCursorsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $SyncCursorsTable> {
+    extends Composer<_$SynesisDatabase, $SyncCursorsTable> {
   $$SyncCursorsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -11776,7 +11776,7 @@ class $$SyncCursorsTableFilterComposer
 }
 
 class $$SyncCursorsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $SyncCursorsTable> {
+    extends Composer<_$SynesisDatabase, $SyncCursorsTable> {
   $$SyncCursorsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -11824,7 +11824,7 @@ class $$SyncCursorsTableOrderingComposer
 }
 
 class $$SyncCursorsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $SyncCursorsTable> {
+    extends Composer<_$SynesisDatabase, $SyncCursorsTable> {
   $$SyncCursorsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -11870,7 +11870,7 @@ class $$SyncCursorsTableAnnotationComposer
 class $$SyncCursorsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $SyncCursorsTable,
           SyncCursor,
           $$SyncCursorsTableFilterComposer,
@@ -11882,7 +11882,7 @@ class $$SyncCursorsTableTableManager
           SyncCursor,
           PrefetchHooks Function({bool accountId})
         > {
-  $$SyncCursorsTableTableManager(_$ByteMailDatabase db, $SyncCursorsTable table)
+  $$SyncCursorsTableTableManager(_$SynesisDatabase db, $SyncCursorsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -11976,7 +11976,7 @@ class $$SyncCursorsTableTableManager
 
 typedef $$SyncCursorsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $SyncCursorsTable,
       SyncCursor,
       $$SyncCursorsTableFilterComposer,
@@ -12006,7 +12006,7 @@ typedef $$WidgetSnapshotsTableUpdateCompanionBuilder =
     });
 
 class $$WidgetSnapshotsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $WidgetSnapshotsTable> {
+    extends Composer<_$SynesisDatabase, $WidgetSnapshotsTable> {
   $$WidgetSnapshotsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -12036,7 +12036,7 @@ class $$WidgetSnapshotsTableFilterComposer
 }
 
 class $$WidgetSnapshotsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $WidgetSnapshotsTable> {
+    extends Composer<_$SynesisDatabase, $WidgetSnapshotsTable> {
   $$WidgetSnapshotsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -12066,7 +12066,7 @@ class $$WidgetSnapshotsTableOrderingComposer
 }
 
 class $$WidgetSnapshotsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $WidgetSnapshotsTable> {
+    extends Composer<_$SynesisDatabase, $WidgetSnapshotsTable> {
   $$WidgetSnapshotsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -12092,7 +12092,7 @@ class $$WidgetSnapshotsTableAnnotationComposer
 class $$WidgetSnapshotsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $WidgetSnapshotsTable,
           WidgetSnapshot,
           $$WidgetSnapshotsTableFilterComposer,
@@ -12103,7 +12103,7 @@ class $$WidgetSnapshotsTableTableManager
           (
             WidgetSnapshot,
             BaseReferences<
-              _$ByteMailDatabase,
+              _$SynesisDatabase,
               $WidgetSnapshotsTable,
               WidgetSnapshot
             >,
@@ -12112,7 +12112,7 @@ class $$WidgetSnapshotsTableTableManager
           PrefetchHooks Function()
         > {
   $$WidgetSnapshotsTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $WidgetSnapshotsTable table,
   ) : super(
         TableManagerState(
@@ -12162,7 +12162,7 @@ class $$WidgetSnapshotsTableTableManager
 
 typedef $$WidgetSnapshotsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $WidgetSnapshotsTable,
       WidgetSnapshot,
       $$WidgetSnapshotsTableFilterComposer,
@@ -12173,7 +12173,7 @@ typedef $$WidgetSnapshotsTableProcessedTableManager =
       (
         WidgetSnapshot,
         BaseReferences<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $WidgetSnapshotsTable,
           WidgetSnapshot
         >,
@@ -12205,7 +12205,7 @@ typedef $$SyncProfilesTableUpdateCompanionBuilder =
     });
 
 class $$SyncProfilesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $SyncProfilesTable> {
+    extends Composer<_$SynesisDatabase, $SyncProfilesTable> {
   $$SyncProfilesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -12250,7 +12250,7 @@ class $$SyncProfilesTableFilterComposer
 }
 
 class $$SyncProfilesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $SyncProfilesTable> {
+    extends Composer<_$SynesisDatabase, $SyncProfilesTable> {
   $$SyncProfilesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -12295,7 +12295,7 @@ class $$SyncProfilesTableOrderingComposer
 }
 
 class $$SyncProfilesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $SyncProfilesTable> {
+    extends Composer<_$SynesisDatabase, $SyncProfilesTable> {
   $$SyncProfilesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -12336,7 +12336,7 @@ class $$SyncProfilesTableAnnotationComposer
 class $$SyncProfilesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $SyncProfilesTable,
           SyncProfile,
           $$SyncProfilesTableFilterComposer,
@@ -12346,13 +12346,13 @@ class $$SyncProfilesTableTableManager
           $$SyncProfilesTableUpdateCompanionBuilder,
           (
             SyncProfile,
-            BaseReferences<_$ByteMailDatabase, $SyncProfilesTable, SyncProfile>,
+            BaseReferences<_$SynesisDatabase, $SyncProfilesTable, SyncProfile>,
           ),
           SyncProfile,
           PrefetchHooks Function()
         > {
   $$SyncProfilesTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $SyncProfilesTable table,
   ) : super(
         TableManagerState(
@@ -12414,7 +12414,7 @@ class $$SyncProfilesTableTableManager
 
 typedef $$SyncProfilesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $SyncProfilesTable,
       SyncProfile,
       $$SyncProfilesTableFilterComposer,
@@ -12424,7 +12424,7 @@ typedef $$SyncProfilesTableProcessedTableManager =
       $$SyncProfilesTableUpdateCompanionBuilder,
       (
         SyncProfile,
-        BaseReferences<_$ByteMailDatabase, $SyncProfilesTable, SyncProfile>,
+        BaseReferences<_$SynesisDatabase, $SyncProfilesTable, SyncProfile>,
       ),
       SyncProfile,
       PrefetchHooks Function()
@@ -12457,10 +12457,10 @@ typedef $$AttachmentsTableUpdateCompanionBuilder =
     });
 
 final class $$AttachmentsTableReferences
-    extends BaseReferences<_$ByteMailDatabase, $AttachmentsTable, Attachment> {
+    extends BaseReferences<_$SynesisDatabase, $AttachmentsTable, Attachment> {
   $$AttachmentsTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $MessagesTable _messageIdTable(_$ByteMailDatabase db) =>
+  static $MessagesTable _messageIdTable(_$SynesisDatabase db) =>
       db.messages.createAlias('attachments__message_id__messages__id');
 
   $$MessagesTableProcessedTableManager get messageId {
@@ -12477,7 +12477,7 @@ final class $$AttachmentsTableReferences
     );
   }
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('attachments__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -12496,7 +12496,7 @@ final class $$AttachmentsTableReferences
 }
 
 class $$AttachmentsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentsTable> {
   $$AttachmentsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -12587,7 +12587,7 @@ class $$AttachmentsTableFilterComposer
 }
 
 class $$AttachmentsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentsTable> {
   $$AttachmentsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -12678,7 +12678,7 @@ class $$AttachmentsTableOrderingComposer
 }
 
 class $$AttachmentsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentsTable> {
   $$AttachmentsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -12759,7 +12759,7 @@ class $$AttachmentsTableAnnotationComposer
 class $$AttachmentsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AttachmentsTable,
           Attachment,
           $$AttachmentsTableFilterComposer,
@@ -12771,7 +12771,7 @@ class $$AttachmentsTableTableManager
           Attachment,
           PrefetchHooks Function({bool messageId, bool accountId})
         > {
-  $$AttachmentsTableTableManager(_$ByteMailDatabase db, $AttachmentsTable table)
+  $$AttachmentsTableTableManager(_$SynesisDatabase db, $AttachmentsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -12898,7 +12898,7 @@ class $$AttachmentsTableTableManager
 
 typedef $$AttachmentsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $AttachmentsTable,
       Attachment,
       $$AttachmentsTableFilterComposer,
@@ -12932,7 +12932,7 @@ typedef $$AttachmentBlobsTableUpdateCompanionBuilder =
 final class $$AttachmentBlobsTableReferences
     extends
         BaseReferences<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AttachmentBlobsTable,
           AttachmentBlob
         > {
@@ -12942,7 +12942,7 @@ final class $$AttachmentBlobsTableReferences
     super.$_typedResult,
   );
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('attachment_blobs__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -12961,7 +12961,7 @@ final class $$AttachmentBlobsTableReferences
 }
 
 class $$AttachmentBlobsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentBlobsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentBlobsTable> {
   $$AttachmentBlobsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -13014,7 +13014,7 @@ class $$AttachmentBlobsTableFilterComposer
 }
 
 class $$AttachmentBlobsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentBlobsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentBlobsTable> {
   $$AttachmentBlobsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -13067,7 +13067,7 @@ class $$AttachmentBlobsTableOrderingComposer
 }
 
 class $$AttachmentBlobsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $AttachmentBlobsTable> {
+    extends Composer<_$SynesisDatabase, $AttachmentBlobsTable> {
   $$AttachmentBlobsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -13114,7 +13114,7 @@ class $$AttachmentBlobsTableAnnotationComposer
 class $$AttachmentBlobsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AttachmentBlobsTable,
           AttachmentBlob,
           $$AttachmentBlobsTableFilterComposer,
@@ -13127,7 +13127,7 @@ class $$AttachmentBlobsTableTableManager
           PrefetchHooks Function({bool accountId})
         > {
   $$AttachmentBlobsTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $AttachmentBlobsTable table,
   ) : super(
         TableManagerState(
@@ -13228,7 +13228,7 @@ class $$AttachmentBlobsTableTableManager
 
 typedef $$AttachmentBlobsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $AttachmentBlobsTable,
       AttachmentBlob,
       $$AttachmentBlobsTableFilterComposer,
@@ -13266,7 +13266,7 @@ typedef $$AccountSignaturesTableUpdateCompanionBuilder =
 final class $$AccountSignaturesTableReferences
     extends
         BaseReferences<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AccountSignaturesTable,
           AccountSignature
         > {
@@ -13276,7 +13276,7 @@ final class $$AccountSignaturesTableReferences
     super.$_typedResult,
   );
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('account_signatures__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager get accountId {
@@ -13297,7 +13297,7 @@ final class $$AccountSignaturesTableReferences
     $AccountSignatureAssetsTable,
     List<AccountSignatureAsset>
   >
-  _accountSignatureAssetsRefsTable(_$ByteMailDatabase db) =>
+  _accountSignatureAssetsRefsTable(_$SynesisDatabase db) =>
       MultiTypedResultKey.fromTable(
         db.accountSignatureAssets,
         aliasName:
@@ -13321,7 +13321,7 @@ final class $$AccountSignaturesTableReferences
 }
 
 class $$AccountSignaturesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignaturesTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignaturesTable> {
   $$AccountSignaturesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -13410,7 +13410,7 @@ class $$AccountSignaturesTableFilterComposer
 }
 
 class $$AccountSignaturesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignaturesTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignaturesTable> {
   $$AccountSignaturesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -13473,7 +13473,7 @@ class $$AccountSignaturesTableOrderingComposer
 }
 
 class $$AccountSignaturesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignaturesTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignaturesTable> {
   $$AccountSignaturesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -13552,7 +13552,7 @@ class $$AccountSignaturesTableAnnotationComposer
 class $$AccountSignaturesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AccountSignaturesTable,
           AccountSignature,
           $$AccountSignaturesTableFilterComposer,
@@ -13568,7 +13568,7 @@ class $$AccountSignaturesTableTableManager
           })
         > {
   $$AccountSignaturesTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $AccountSignaturesTable table,
   ) : super(
         TableManagerState(
@@ -13705,7 +13705,7 @@ class $$AccountSignaturesTableTableManager
 
 typedef $$AccountSignaturesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $AccountSignaturesTable,
       AccountSignature,
       $$AccountSignaturesTableFilterComposer,
@@ -13739,7 +13739,7 @@ typedef $$AccountSignatureAssetsTableUpdateCompanionBuilder =
 final class $$AccountSignatureAssetsTableReferences
     extends
         BaseReferences<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AccountSignatureAssetsTable,
           AccountSignatureAsset
         > {
@@ -13749,7 +13749,7 @@ final class $$AccountSignatureAssetsTableReferences
     super.$_typedResult,
   );
 
-  static $AccountSignaturesTable _signatureIdTable(_$ByteMailDatabase db) =>
+  static $AccountSignaturesTable _signatureIdTable(_$SynesisDatabase db) =>
       db.accountSignatures.createAlias(
         'account_signature_assets__signature_id__account_signatures__id',
       );
@@ -13770,7 +13770,7 @@ final class $$AccountSignatureAssetsTableReferences
 }
 
 class $$AccountSignatureAssetsTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignatureAssetsTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignatureAssetsTable> {
   $$AccountSignatureAssetsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -13823,7 +13823,7 @@ class $$AccountSignatureAssetsTableFilterComposer
 }
 
 class $$AccountSignatureAssetsTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignatureAssetsTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignatureAssetsTable> {
   $$AccountSignatureAssetsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -13876,7 +13876,7 @@ class $$AccountSignatureAssetsTableOrderingComposer
 }
 
 class $$AccountSignatureAssetsTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $AccountSignatureAssetsTable> {
+    extends Composer<_$SynesisDatabase, $AccountSignatureAssetsTable> {
   $$AccountSignatureAssetsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -13924,7 +13924,7 @@ class $$AccountSignatureAssetsTableAnnotationComposer
 class $$AccountSignatureAssetsTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $AccountSignatureAssetsTable,
           AccountSignatureAsset,
           $$AccountSignatureAssetsTableFilterComposer,
@@ -13937,7 +13937,7 @@ class $$AccountSignatureAssetsTableTableManager
           PrefetchHooks Function({bool signatureId})
         > {
   $$AccountSignatureAssetsTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $AccountSignatureAssetsTable table,
   ) : super(
         TableManagerState(
@@ -14047,7 +14047,7 @@ class $$AccountSignatureAssetsTableTableManager
 
 typedef $$AccountSignatureAssetsTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $AccountSignatureAssetsTable,
       AccountSignatureAsset,
       $$AccountSignatureAssetsTableFilterComposer,
@@ -14083,7 +14083,7 @@ typedef $$MessageTemplatesTableUpdateCompanionBuilder =
 final class $$MessageTemplatesTableReferences
     extends
         BaseReferences<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $MessageTemplatesTable,
           MessageTemplate
         > {
@@ -14093,7 +14093,7 @@ final class $$MessageTemplatesTableReferences
     super.$_typedResult,
   );
 
-  static $AccountsTable _accountIdTable(_$ByteMailDatabase db) =>
+  static $AccountsTable _accountIdTable(_$SynesisDatabase db) =>
       db.accounts.createAlias('message_templates__account_id__accounts__id');
 
   $$AccountsTableProcessedTableManager? get accountId {
@@ -14112,7 +14112,7 @@ final class $$MessageTemplatesTableReferences
 }
 
 class $$MessageTemplatesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $MessageTemplatesTable> {
+    extends Composer<_$SynesisDatabase, $MessageTemplatesTable> {
   $$MessageTemplatesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -14170,7 +14170,7 @@ class $$MessageTemplatesTableFilterComposer
 }
 
 class $$MessageTemplatesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $MessageTemplatesTable> {
+    extends Composer<_$SynesisDatabase, $MessageTemplatesTable> {
   $$MessageTemplatesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -14228,7 +14228,7 @@ class $$MessageTemplatesTableOrderingComposer
 }
 
 class $$MessageTemplatesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $MessageTemplatesTable> {
+    extends Composer<_$SynesisDatabase, $MessageTemplatesTable> {
   $$MessageTemplatesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -14278,7 +14278,7 @@ class $$MessageTemplatesTableAnnotationComposer
 class $$MessageTemplatesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $MessageTemplatesTable,
           MessageTemplate,
           $$MessageTemplatesTableFilterComposer,
@@ -14291,7 +14291,7 @@ class $$MessageTemplatesTableTableManager
           PrefetchHooks Function({bool accountId})
         > {
   $$MessageTemplatesTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $MessageTemplatesTable table,
   ) : super(
         TableManagerState(
@@ -14396,7 +14396,7 @@ class $$MessageTemplatesTableTableManager
 
 typedef $$MessageTemplatesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $MessageTemplatesTable,
       MessageTemplate,
       $$MessageTemplatesTableFilterComposer,
@@ -14426,7 +14426,7 @@ typedef $$CustomThemesTableUpdateCompanionBuilder =
     });
 
 class $$CustomThemesTableFilterComposer
-    extends Composer<_$ByteMailDatabase, $CustomThemesTable> {
+    extends Composer<_$SynesisDatabase, $CustomThemesTable> {
   $$CustomThemesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -14456,7 +14456,7 @@ class $$CustomThemesTableFilterComposer
 }
 
 class $$CustomThemesTableOrderingComposer
-    extends Composer<_$ByteMailDatabase, $CustomThemesTable> {
+    extends Composer<_$SynesisDatabase, $CustomThemesTable> {
   $$CustomThemesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -14486,7 +14486,7 @@ class $$CustomThemesTableOrderingComposer
 }
 
 class $$CustomThemesTableAnnotationComposer
-    extends Composer<_$ByteMailDatabase, $CustomThemesTable> {
+    extends Composer<_$SynesisDatabase, $CustomThemesTable> {
   $$CustomThemesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -14514,7 +14514,7 @@ class $$CustomThemesTableAnnotationComposer
 class $$CustomThemesTableTableManager
     extends
         RootTableManager<
-          _$ByteMailDatabase,
+          _$SynesisDatabase,
           $CustomThemesTable,
           CustomTheme,
           $$CustomThemesTableFilterComposer,
@@ -14524,13 +14524,13 @@ class $$CustomThemesTableTableManager
           $$CustomThemesTableUpdateCompanionBuilder,
           (
             CustomTheme,
-            BaseReferences<_$ByteMailDatabase, $CustomThemesTable, CustomTheme>,
+            BaseReferences<_$SynesisDatabase, $CustomThemesTable, CustomTheme>,
           ),
           CustomTheme,
           PrefetchHooks Function()
         > {
   $$CustomThemesTableTableManager(
-    _$ByteMailDatabase db,
+    _$SynesisDatabase db,
     $CustomThemesTable table,
   ) : super(
         TableManagerState(
@@ -14580,7 +14580,7 @@ class $$CustomThemesTableTableManager
 
 typedef $$CustomThemesTableProcessedTableManager =
     ProcessedTableManager<
-      _$ByteMailDatabase,
+      _$SynesisDatabase,
       $CustomThemesTable,
       CustomTheme,
       $$CustomThemesTableFilterComposer,
@@ -14590,15 +14590,15 @@ typedef $$CustomThemesTableProcessedTableManager =
       $$CustomThemesTableUpdateCompanionBuilder,
       (
         CustomTheme,
-        BaseReferences<_$ByteMailDatabase, $CustomThemesTable, CustomTheme>,
+        BaseReferences<_$SynesisDatabase, $CustomThemesTable, CustomTheme>,
       ),
       CustomTheme,
       PrefetchHooks Function()
     >;
 
-class $ByteMailDatabaseManager {
-  final _$ByteMailDatabase _db;
-  $ByteMailDatabaseManager(this._db);
+class $SynesisDatabaseManager {
+  final _$SynesisDatabase _db;
+  $SynesisDatabaseManager(this._db);
   $$AccountsTableTableManager get accounts =>
       $$AccountsTableTableManager(_db, _db.accounts);
   $$FoldersTableTableManager get folders =>

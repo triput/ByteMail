@@ -7,7 +7,7 @@
 | Prerequisite | [TIER_A_PLAN.md](TIER_A_PLAN.md) foundations (or merged V1 build — see [V1_TIER_INTEGRATION.md](V1_TIER_INTEGRATION.md)) |
 | Last updated | 2026-07-17 (W5 desktop UI wiring landed — TB-9 nearly complete) |
 
-Tier B makes ByteMail feel **finished** — the behaviors users assume after basic send/receive works. **W2 (2026-07-17)** delivered threading, filters, date groups, local snooze/pin, mobile gestures, virtual starred/pinned/snoozed views, and list polish. **W3 (2026-07-17)** delivered push/near-push sync. Remaining Tier B work (drafts, layout, rich compose, templates) maps to W4–W5.
+Tier B makes Synesis feel **finished** — the behaviors users assume after basic send/receive works. **W2 (2026-07-17)** delivered threading, filters, date groups, local snooze/pin, mobile gestures, virtual starred/pinned/snoozed views, and list polish. **W3 (2026-07-17)** delivered push/near-push sync. Remaining Tier B work (drafts, layout, rich compose, templates) maps to W4–W5.
 
 ---
 

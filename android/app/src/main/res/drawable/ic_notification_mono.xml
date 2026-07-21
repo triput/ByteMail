@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Monochrome notification icon alias. Prefer density PNGs: drawable-*/ic_stat_bytemail.png -->
+<!-- Monochrome notification icon alias. Prefer density PNGs: drawable-*/ic_stat_synesis.png -->
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_stat_bytemail"
+    android:src="@drawable/ic_stat_synesis"
     android:tint="#FFFFFF"/>

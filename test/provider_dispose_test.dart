@@ -7,13 +7,13 @@
 // Last Update: 2026-07-16
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/protocol/graph_mail_provider.dart';
-import 'package:bytemail/protocol/imap_smtp_mail_provider.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/protocol/graph_mail_provider.dart';
+import 'package:synesis/protocol/imap_smtp_mail_provider.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';

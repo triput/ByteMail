@@ -12,12 +12,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
 
 /// Opens the sync health / job viewer sheet.
 Future<void> showSyncStatusSheet(BuildContext context) async {

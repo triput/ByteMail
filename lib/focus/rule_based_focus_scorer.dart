@@ -7,10 +7,10 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/focus/focus_override_registry.dart';
-import 'package:bytemail/focus/focus_scorer.dart';
-import 'package:bytemail/focus/mail_message_draft.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/focus/focus_override_registry.dart';
+import 'package:synesis/focus/focus_scorer.dart';
+import 'package:synesis/focus/mail_message_draft.dart';
 
 class RuleBasedFocusScorer implements FocusScorer {
   const RuleBasedFocusScorer({

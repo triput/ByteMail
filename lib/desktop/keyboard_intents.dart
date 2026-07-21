@@ -20,7 +20,7 @@ import 'package:flutter/widgets.dart';
 /// - `?` — keymap help
 /// - Delete / Shift+Delete — trash / permanent delete
 /// - E archive · R reply · Shift+R reply all · F forward · S star · B snooze
-abstract final class ByteMailKeyboardShortcuts {
+abstract final class SynesisKeyboardShortcuts {
   static const SingleActivator nextMessage = SingleActivator(
     LogicalKeyboardKey.keyJ,
     control: true,

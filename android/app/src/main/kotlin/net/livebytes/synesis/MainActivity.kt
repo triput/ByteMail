@@ -1,4 +1,4 @@
-package com.bytemail.bytemail
+package net.livebytes.synesis
 
 import io.flutter.embedding.android.FlutterActivity
 

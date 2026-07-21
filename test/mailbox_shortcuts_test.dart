@@ -1,5 +1,5 @@
-import 'package:bytemail/desktop/keyboard_intents.dart';
-import 'package:bytemail/ui/shell/keymap_help_sheet.dart';
+import 'package:synesis/desktop/keyboard_intents.dart';
+import 'package:synesis/ui/shell/keymap_help_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -13,7 +13,7 @@ void main() {
     );
     // Without HardwareKeyboard control pressed, chord is false.
     expect(
-      ByteMailKeyboardShortcuts.isControlChord(event, LogicalKeyboardKey.keyJ),
+      SynesisKeyboardShortcuts.isControlChord(event, LogicalKeyboardKey.keyJ),
       isFalse,
     );
   });
@@ -25,7 +25,7 @@ void main() {
       timeStamp: Duration.zero,
     );
     expect(
-      ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyE),
+      SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyE),
       isTrue,
     );
   });
@@ -42,7 +42,7 @@ void main() {
     );
     await tester.tap(find.byType(SelectableText));
     await tester.pump();
-    expect(ByteMailKeyboardShortcuts.isEditingText, isFalse);
+    expect(SynesisKeyboardShortcuts.isEditingText, isFalse);
   });
 
   testWidgets('isEditingText is true for focused TextField', (
@@ -56,7 +56,7 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(ByteMailKeyboardShortcuts.isEditingText, isTrue);
+    expect(SynesisKeyboardShortcuts.isEditingText, isTrue);
   });
 
   test('isKeymapHelpKey matches question character', () {
@@ -66,7 +66,7 @@ void main() {
       character: '?',
       timeStamp: Duration.zero,
     );
-    expect(ByteMailKeyboardShortcuts.isKeymapHelpKey(event), isTrue);
+    expect(SynesisKeyboardShortcuts.isKeymapHelpKey(event), isTrue);
   });
 
   test('isKeymapHelpKey rejects bare slash without shift', () {
@@ -76,7 +76,7 @@ void main() {
       character: '/',
       timeStamp: Duration.zero,
     );
-    expect(ByteMailKeyboardShortcuts.isKeymapHelpKey(event), isFalse);
+    expect(SynesisKeyboardShortcuts.isKeymapHelpKey(event), isFalse);
   });
 
   testWidgets('keymap help sheet lists bindings', (WidgetTester tester) async {

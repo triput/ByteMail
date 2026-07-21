@@ -8,7 +8,7 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/theme/app_theme.dart';
+import 'package:synesis/theme/app_theme.dart';
 
 /// Shows snooze presets / custom picker. Returns epoch ms, or null if cancelled.
 Future<int?> showSnoozeDialog(BuildContext context) async {

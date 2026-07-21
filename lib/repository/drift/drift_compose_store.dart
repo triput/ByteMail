@@ -9,8 +9,8 @@
 
 import 'dart:io';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/repository/database.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/repository/database.dart';
 import 'package:drift/drift.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -22,7 +22,7 @@ class DriftComposeStore {
     required void Function() notify,
   }) : _notify = notify;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
   final Uuid _uuid = const Uuid();
 

@@ -7,11 +7,11 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/settings/settings_export_service.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/settings/settings_export_service.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

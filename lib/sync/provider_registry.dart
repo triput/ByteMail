@@ -7,13 +7,13 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/protocol/graph_mail_provider.dart';
-import 'package:bytemail/protocol/imap_smtp_mail_provider.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/protocol/graph_mail_provider.dart';
+import 'package:synesis/protocol/imap_smtp_mail_provider.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/repository/mail_repository.dart';
 import 'package:http/http.dart' as http;
 
 class ProviderRegistry {

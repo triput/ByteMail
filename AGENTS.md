@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="docs/branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="docs/branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# Local Multi-Agent Architecture & Engineering Standards | ByteMail
+# Local Multi-Agent Architecture & Engineering Standards | Synesis
 
-This workspace utilizes a specialized multi-agent framework to orchestrate software development lifecycles, architectural reviews, and quality gates directly within VS Code. The environment leverages a **"Leadership Trifecta"** model (Management, Implementation, and Quality Assurance) alongside a dedicated Knowledge Management layer specifically tuned for the ByteMail Flutter/Dart ecosystem.
+This workspace utilizes a specialized multi-agent framework to orchestrate software development lifecycles, architectural reviews, and quality gates directly within VS Code. The environment leverages a **"Leadership Trifecta"** model (Management, Implementation, and Quality Assurance) alongside a dedicated Knowledge Management layer specifically tuned for the Synesis Flutter/Dart ecosystem.
 
 ---
 
@@ -38,7 +38,7 @@ This workspace utilizes a specialized multi-agent framework to orchestrate softw
 
 ## 2. Architectural Philosophy & Core Stack
 
-The architecture prioritized across the ByteMail platform emphasizes zero-lag performance, predictable state tracking, and reliable background synchronization.
+The architecture prioritized across the Synesis platform emphasizes zero-lag performance, predictable state tracking, and reliable background synchronization.
 
 *   **Data Paradigm:** Local-First Architecture. The UI layers must strictly read from the local SQLite database. The sync engine operates entirely in the background.
 *   **Async Operations:** Utilize background Dart Isolates for all intensive networking (IMAP/SMTP/Graph API streams) and heavy MIME parsing to preserve 60fps UI fluidness.

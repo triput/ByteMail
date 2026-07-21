@@ -7,8 +7,8 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 MailMessage _message({

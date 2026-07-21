@@ -9,10 +9,10 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
 
-export 'package:bytemail/ui/compose/compose_prefill.dart' show ComposeMode;
+export 'package:synesis/ui/compose/compose_prefill.dart' show ComposeMode;
 
 /// Local file staged for outbound attach (paths resolve via attachment_blobs).
 class LocalAttachmentRef {

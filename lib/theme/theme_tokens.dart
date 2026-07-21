@@ -1,13 +1,13 @@
 // ==============================================================================
 // File: lib/theme/theme_tokens.dart
-// Description: Complete token packs for ByteMail's built-in appearances.
+// Description: Complete token packs for Synesis's built-in appearances.
 // Component: UI / Theme
 // Version: 1.0 (Gold Master)
 // Created: 2026-07-14
 // Last Update: 2026-07-16
 // ==============================================================================
 
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/theme/theme_id.dart';
 import 'package:flutter/material.dart';
 
 /// Tokenized colors so themes stay data-driven (SPEC §7.7).

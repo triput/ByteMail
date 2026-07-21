@@ -12,12 +12,12 @@ import 'dart:isolate';
 
 import 'package:sqlite3/sqlite3.dart';
 
-import 'package:bytemail/repository/db_encryption_config.dart';
+import 'package:synesis/repository/db_encryption_config.dart';
 
 /// Raised when a migration cannot proceed safely, e.g. the encrypted copy
 /// fails an integrity check or a wrong source passphrase was supplied.
 ///
-/// ByteMail never leaves the mailbox in a half-migrated state: on failure
+/// Synesis never leaves the mailbox in a half-migrated state: on failure
 /// the original file is restored from its backup before this is thrown.
 class DbEncryptionMigrationException implements Exception {
   DbEncryptionMigrationException(this.message);
@@ -43,7 +43,7 @@ class DbEncryptionMigrator {
   ///
   /// No-ops if the file does not exist yet — fresh installs that enable
   /// encryption before their first sync open encrypted from the very first
-  /// write via `ByteMailDatabase`'s connection factory, so there is nothing
+  /// write via `SynesisDatabase`'s connection factory, so there is nothing
   /// to migrate.
   Future<void> encryptInPlace({
     required String databasePath,

@@ -9,10 +9,10 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
 
 /// Current [SettingsExportService] JSON schema version.
 const int kSettingsExportFormatVersion = 1;
@@ -31,7 +31,7 @@ class SettingsExportBundle {
 }
 
 /// Encodes and decodes a versioned, secret-free JSON snapshot of
-/// user-visible ByteMail appearance preferences plus custom themes.
+/// user-visible Synesis appearance preferences plus custom themes.
 ///
 /// Account credentials, OAuth tokens, and other secrets are never part of
 /// [AppSettingsState] or [CustomTheme], but [validate] defensively rejects
@@ -42,7 +42,7 @@ class SettingsExportService {
 
   /// Lower-cased substrings that must never appear anywhere in an
   /// export/import key. These are unambiguous enough that no legitimate
-  /// ByteMail preference key contains them.
+  /// Synesis preference key contains them.
   static const Set<String> secretKeySubstrings = <String>{
     'credential',
     'password',

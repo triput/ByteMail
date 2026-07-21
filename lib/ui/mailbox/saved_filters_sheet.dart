@@ -10,10 +10,10 @@
 import 'dart:async' show unawaited;
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Opens the saved-filters management sheet.
 Future<void> showSavedFiltersSheet(

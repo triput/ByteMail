@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/oauth_redirect_capture.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/oauth_redirect_capture.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
@@ -89,7 +89,7 @@ void main() {
       const GoogleAuthConfig config = GoogleAuthConfig(clientId: 'google-1');
       expect(config.isConfigured, isTrue);
       expect(GoogleAuthConfig.desktopRedirectUri, contains('8766'));
-      expect(GoogleAuthConfig.androidRedirectUri, 'bytemail://google-auth');
+      expect(GoogleAuthConfig.androidRedirectUri, 'synesis://google-auth');
       expect(GoogleAuthConfig.scopes, contains('https://mail.google.com/'));
     });
   });

@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# Dart in ByteMail — A Curious Engineer's Tour
+# Dart in Synesis — A Curious Engineer's Tour
 
 **For:** Trish (product owner, curious engineer) and anyone who wants to read the codebase without becoming a Dart expert first.
 
@@ -12,11 +12,11 @@
 
 ## 1. Overview — Why Dart Here?
 
-ByteMail is a **local-first email client** for **Windows** and **Android**. Dart is the language; **Flutter** is the UI toolkit that turns Dart into native apps on both platforms from one codebase.
+Synesis is a **local-first email client** for **Windows** and **Android**. Dart is the language; **Flutter** is the UI toolkit that turns Dart into native apps on both platforms from one codebase.
 
 That pairing is deliberate:
 
-| Choice | What it means in ByteMail | Why it exists |
+| Choice | What it means in Synesis | Why it exists |
 | --- | --- | --- |
 | **Flutter** | One UI codebase compiles to Windows desktop and Android mobile | Ship both v1 platforms without maintaining two separate front ends |
 | **Local-first + SQLite (Drift)** | Everything on screen reads from a local database file | Inbox opens instantly; offline still works; no spinner while waiting on the server |
@@ -77,7 +77,7 @@ flowchart LR
 
 ---
 
-## 3. Dart Concepts You'll See in ByteMail
+## 3. Dart Concepts You'll See in Synesis
 
 Each item below is **only** what appears in this repo — not the full Dart language.
 
@@ -85,20 +85,20 @@ Each item below is **only** what appears in this repo — not the full Dart lang
 
 **Future** = "a value that will arrive later" (like a Promise in JavaScript). **async** functions return Futures. **await** pauses until the Future completes — without blocking the UI thread.
 
-**ByteMail example:** `lib/main.dart` — startup is one long async chain: open SharedPreferences, open the database, wire SyncEngine, then `runApp(...)`. Nothing paints until the database and core services exist.
+**Synesis example:** `lib/main.dart` — startup is one long async chain: open SharedPreferences, open the database, wire SyncEngine, then `runApp(...)`. Nothing paints until the database and core services exist.
 
 ```dart
 final SharedPreferences prefs = await SharedPreferences.getInstance();
-final ByteMailDatabase database = ByteMailDatabase.open();
+final SynesisDatabase database = SynesisDatabase.open();
 // ...
-runApp(ByteMailApp(...));
+runApp(SynesisApp(...));
 ```
 
 ### `Stream` + `watchChanges` / `BlocBuilder`
 
 A **Stream** emits events over time. Drift-backed repositories broadcast "something changed" so Cubits can refresh without polling.
 
-**ByteMail example:** `lib/repository/drift_mail_repository.dart` exposes `watchChanges()`. `lib/ui/mailbox/mailbox_cubit.dart` subscribes in `attachDbWatch()` and calls `refresh()` on each pulse.
+**Synesis example:** `lib/repository/drift_mail_repository.dart` exposes `watchChanges()`. `lib/ui/mailbox/mailbox_cubit.dart` subscribes in `attachDbWatch()` and calls `refresh()` on each pulse.
 
 **BlocBuilder** (from `flutter_bloc`) rebuilds a widget when a Cubit emits new state — e.g. `MailWorkspace` and panes listen to `MailboxCubit` instead of calling `setState` for mail data.
 
@@ -106,7 +106,7 @@ A **Stream** emits events over time. Drift-backed repositories broadcast "someth
 
 Dart 3 assumes values are non-null unless marked optional.
 
-| Syntax | Meaning | ByteMail touchpoint |
+| Syntax | Meaning | Synesis touchpoint |
 | --- | --- | --- |
 | `String?` | Maybe null | `MailMessage.body` can be null until fetched |
 | `??` | Default if null | Settings hydration: `map['themeId'] as bool? ?? true` in `app_settings_cubit.dart` |
@@ -116,20 +116,20 @@ Dart 3 assumes values are non-null unless marked optional.
 
 **const** widgets and objects are created at compile time and reused — cheaper rebuilds.
 
-**ByteMail example:** `MailboxState()` defaults, `NoopDesktopController()`, theme tokens — you'll see `const` on immutable UI shells and state snapshots throughout `lib/ui/` and `lib/settings/`.
+**Synesis example:** `MailboxState()` defaults, `NoopDesktopController()`, theme tokens — you'll see `const` on immutable UI shells and state snapshots throughout `lib/ui/` and `lib/settings/`.
 
 ### Isolates
 
 An **Isolate** is a separate memory heap — true parallel work without sharing mutable state on the UI thread.
 
-**Where ByteMail uses them today:** `lib/mime/multipart_builder.dart` — `buildMultipartMessageInIsolate()` calls `Isolate.run()` to assemble outgoing MIME bytes before send. Sync and network I/O use **async/await** on the main isolate (sequential job loop in `sync_engine.dart`), but MIME assembly is the heaviest CPU path pushed off-thread.
+**Where Synesis uses them today:** `lib/mime/multipart_builder.dart` — `buildMultipartMessageInIsolate()` calls `Isolate.run()` to assemble outgoing MIME bytes before send. Sync and network I/O use **async/await** on the main isolate (sequential job loop in `sync_engine.dart`), but MIME assembly is the heaviest CPU path pushed off-thread.
 
 ### Packages vs `lib/`
 
 | Location | Role |
 | --- | --- |
 | **`pubspec.yaml` + pub cache** | Third-party packages (`flutter_bloc`, `drift`, `connectivity_plus`, …) |
-| **`lib/`** | ByteMail source, imported as `package:bytemail/...` |
+| **`lib/`** | Synesis source, imported as `package:synesis/...` |
 | **`test/`** | Automated tests mirroring `lib/` structure |
 
 Your product code lives under `lib/`; packages are dependencies you don't edit.
@@ -166,7 +166,7 @@ Follow this ordered path when exploring. Each stop: **role** and **why it exists
 
 ### Stop 2 — `lib/app.dart` (root MaterialApp + providers)
 
-**Role:** Builds `ByteMailApp` — `MultiRepositoryProvider` for services (`MailRepository`, `SyncEngine`, `AccountService`, …) and `MultiBlocProvider` for `AppSettingsCubit` and `MailboxCubit`. Applies theme from settings and hosts `MailWorkspace` as the home route.
+**Role:** Builds `SynesisApp` — `MultiRepositoryProvider` for services (`MailRepository`, `SyncEngine`, `AccountService`, …) and `MultiBlocProvider` for `AppSettingsCubit` and `MailboxCubit`. Applies theme from settings and hosts `MailWorkspace` as the home route.
 
 **Why:** Flutter widgets can't reach into globals cleanly; providers expose services to the subtree. One place to see everything the UI layer is allowed to touch.
 
@@ -316,7 +316,7 @@ For the full catalog of what's already automated, see [TEST_INVENTORY.md](TEST_I
 | Dart language tutorial | [dart.dev](https://dart.dev/guides) |
 | Product requirements & UX spec | [SPEC.md](SPEC.md) |
 | Architecture without code | [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md) |
-| End-user "how to use ByteMail" | [USER_GUIDE.md](USER_GUIDE.md) · [QUICK_START.md](QUICK_START.md) |
+| End-user "how to use Synesis" | [USER_GUIDE.md](USER_GUIDE.md) · [QUICK_START.md](QUICK_START.md) |
 | Manual QA click paths | [V1_MANUAL_E2E_MATRIX.csv](V1_MANUAL_E2E_MATRIX.csv) — living draft (FW-5; not finalized) |
 | Multi-agent team playbook | [MULTI_AGENT_SYSTEM_PROMPT.md](MULTI_AGENT_SYSTEM_PROMPT.md) |
 

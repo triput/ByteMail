@@ -10,19 +10,19 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:bytemail/compose/outgoing_message_builder.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/focus/focus.dart';
-import 'package:bytemail/mime/outgoing_envelope.dart';
-import 'package:bytemail/protocol/graph_mail_provider.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/protocol/thread_id.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/outbox/send_error_messages.dart';
-import 'package:bytemail/sync/imap_idle_service.dart';
-import 'package:bytemail/sync/network_sync_policy.dart';
-import 'package:bytemail/widgets/widget_snapshot_service.dart';
+import 'package:synesis/compose/outgoing_message_builder.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/focus/focus.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
+import 'package:synesis/protocol/graph_mail_provider.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/protocol/thread_id.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/outbox/send_error_messages.dart';
+import 'package:synesis/sync/imap_idle_service.dart';
+import 'package:synesis/sync/network_sync_policy.dart';
+import 'package:synesis/widgets/widget_snapshot_service.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart'
     show TargetPlatform, defaultTargetPlatform, kIsWeb;

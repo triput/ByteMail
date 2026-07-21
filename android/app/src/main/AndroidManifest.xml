@@ -2,7 +2,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <application
-        android:label="bytemail"
+        android:label="synesis"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -31,7 +31,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data
-                    android:scheme="bytemail"
+                    android:scheme="synesis"
                     android:host="auth"/>
             </intent-filter>
             <intent-filter>
@@ -39,20 +39,20 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data
-                    android:scheme="bytemail"
+                    android:scheme="synesis"
                     android:host="google-auth"/>
             </intent-filter>
         </activity>
         <receiver
-            android:name=".ByteMailWidgetProvider"
+            android:name=".SynesisWidgetProvider"
             android:exported="false"
-            android:label="ByteMail">
+            android:label="Synesis">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/byte_mail_widget_info" />
+                android:resource="@xml/synesis_widget_info" />
         </receiver>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->

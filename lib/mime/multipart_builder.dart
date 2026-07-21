@@ -12,7 +12,7 @@ import 'dart:io';
 import 'dart:isolate';
 import 'dart:typed_data';
 
-import 'package:bytemail/mime/outgoing_envelope.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
 import 'package:path/path.dart' as p;
 
 /// Builds a multipart MIME message synchronously on the calling isolate.
@@ -120,7 +120,7 @@ String _buildAttachmentPart(String path) {
 
 String _boundary(String label) {
   final int stamp = DateTime.now().microsecondsSinceEpoch;
-  return 'bytemail_${label}_$stamp';
+  return 'synesis_${label}_$stamp';
 }
 
 String _encodeHeader(String value) {

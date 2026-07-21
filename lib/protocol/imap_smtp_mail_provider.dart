@@ -10,15 +10,15 @@
 import 'dart:async';
 import 'dart:typed_data';
 
-import 'package:bytemail/focus/focus_header_map.dart';
-import 'package:bytemail/mime/multipart_builder.dart';
-import 'package:bytemail/mime/outgoing_envelope.dart';
-import 'package:bytemail/protocol/mail_date_parser.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/protocol/thread_id.dart';
+import 'package:synesis/focus/focus_header_map.dart';
+import 'package:synesis/mime/multipart_builder.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
+import 'package:synesis/protocol/mail_date_parser.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/protocol/thread_id.dart';
 import 'package:enough_mail/enough_mail.dart';
 
-/// Maps enough_mail special-use flags to ByteMail folder roles.
+/// Maps enough_mail special-use flags to Synesis folder roles.
 String? imapMailboxRole(Mailbox mailbox) {
   if (mailbox.isInbox) {
     return 'inbox';

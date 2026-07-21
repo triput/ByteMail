@@ -7,10 +7,10 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart' as domain;
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift/drift_account_mapper.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart' as domain;
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift/drift_account_mapper.dart';
 import 'package:drift/drift.dart';
 
 class DriftSyncProfileStore {
@@ -19,7 +19,7 @@ class DriftSyncProfileStore {
     required void Function() notify,
   }) : _notify = notify;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
 
   Future<List<domain.SyncProfile>> listSyncProfiles() async {

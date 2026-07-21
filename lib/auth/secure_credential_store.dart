@@ -41,7 +41,7 @@ class SecureCredentialStore {
 
   Future<void> deleteCredentials(String credentialsRef) async {
     final Map<String, String> values = await _storage.readAll();
-    final String prefix = 'bytemail:$credentialsRef:';
+    final String prefix = 'synesis:$credentialsRef:';
     await Future.wait(
       values.keys
           .where((String key) => key.startsWith(prefix))
@@ -53,6 +53,6 @@ class SecureCredentialStore {
     if (credentialsRef.trim().isEmpty || name.trim().isEmpty) {
       throw ArgumentError('Credential references and names must not be empty.');
     }
-    return 'bytemail:$credentialsRef:$name';
+    return 'synesis:$credentialsRef:$name';
   }
 }

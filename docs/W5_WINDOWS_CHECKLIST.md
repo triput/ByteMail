@@ -79,7 +79,7 @@ Wiring: Appearance → `AppSettingsCubit.setMinimizeToTray` → `app.dart` `Bloc
 
 - [x] With **Minimize to tray** ON: minimize button hides window to tray (not taskbar-only minimize).
 - [x] Close (X) hides to tray instead of quitting.
-- [x] Tray icon context menu → **Show ByteMail** restores and focuses window.
+- [x] Tray icon context menu → **Show Synesis** restores and focuses window.
 - [x] Tray context menu → **Quit** exits process.
 - [x] Toggle **Minimize to tray** OFF in Appearance; close (X) quits app; minimize uses normal taskbar behavior.
 - [x] Tray icon visible on **release** build (debug may log `MissingPluginException` if tray plugin unavailable).
@@ -108,8 +108,8 @@ Wiring: Appearance → `AppSettingsCubit.setMinimizeToTray` → `app.dart` `Bloc
 
 Windows **file type association** and Explorer double-click require an installer ProgId that is **not in repo yet**. Manual testing of these items is **deferred** until the installer ships:
 
-- [ ] ~~Double-click~~ `.eml` ~~in Explorer opens ByteMail~~ — **deferred (no ProgId)**
-- [ ] `ByteMail.exe "C:\path\to\message.eml"` ~~opens main shell and shows EML preview~~ — **deferred with installer packaging**
+- [ ] ~~Double-click~~ `.eml` ~~in Explorer opens Synesis~~ — **deferred (no ProgId)**
+- [ ] `Synesis.exe "C:\path\to\message.eml"` ~~opens main shell and shows EML preview~~ — **deferred with installer packaging**
 - [ ] ~~Invalid path / non-~~`.eml` ~~launch-arg behavior~~ — **deferred with installer packaging**
 
 

@@ -7,9 +7,9 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/theme_id.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -78,7 +78,7 @@ void main() {
 
     test('missing prefs key falls back to threaded', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -120,7 +120,7 @@ void main() {
 
     test('missing swipe prefs fall back to archive / delete', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -159,7 +159,7 @@ void main() {
 
     test('missing prefs key falls back to true', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -197,7 +197,7 @@ void main() {
 
     test('missing prefs key falls back to false', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -242,7 +242,7 @@ void main() {
 
     test('missing prefs key falls back to right', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -280,7 +280,7 @@ void main() {
 
     test('missing prefs key falls back to false', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -339,7 +339,7 @@ void main() {
 
     test('missing notification prefs fall back to defaults', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'
@@ -468,7 +468,7 @@ void main() {
 
     test('missing prefs keys fall back to UI font defaults', () async {
       SharedPreferences.setMockInitialValues(<String, Object>{
-        'bytemail.app_settings.v1':
+        'synesis.app_settings.v1':
             '{"themeId":"dark","density":"calm","unifiedFocusEnabled":true,'
             '"accountFocusEnabled":{},"retentionDays":180,'
             '"trashRetentionDays":30,"minimizeToTray":true,'

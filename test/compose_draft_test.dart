@@ -7,10 +7,10 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/compose/outgoing_message_builder.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/ui/compose/compose_draft.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
+import 'package:synesis/compose/outgoing_message_builder.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/ui/compose/compose_draft.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 MailMessage _msg({
@@ -54,7 +54,7 @@ void main() {
       html: '<b>hi</b>',
     );
     expect(OutgoingMessageBuilder.unpackPlain(packed), 'hi');
-    expect(packed, contains('---bytemail-html---'));
+    expect(packed, contains('---synesis-html---'));
   });
 
   test('reply builds References JSON including Message-ID', () {

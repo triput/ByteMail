@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/sync/network_sync_policy.dart';
+import 'package:synesis/sync/network_sync_policy.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_test/flutter_test.dart';
 

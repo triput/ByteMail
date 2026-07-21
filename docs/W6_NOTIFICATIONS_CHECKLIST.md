@@ -9,7 +9,7 @@ Manual smoke list for W6 new-mail OS notifications on **Windows release builds**
 - **Windows:** release or profile build with at least one synced account and inbox mail waiting on the server (or a second client to inject unread).
 - **Android AVD:** API 34+ emulator; grant **Post notifications** when prompted (Android 13+). Confirm title bar → **Notifications** icon opens the settings sheet.
 - Appearance / title bar → **Notifications** sheet reachable on both platforms.
-- Use a test account you can mark unread from another client or send mail into while ByteMail is backgrounded.
+- Use a test account you can mark unread from another client or send mail into while Synesis is backgrounded.
 
 
 
@@ -61,7 +61,7 @@ Manual smoke list for W6 new-mail OS notifications on **Windows release builds**
 
 **Code:** `SyncEngine` `_maybeNotifyNewUnread` on incremental inbox sync; `isAppForeground` must be false.
 
-- [x] Minimize or background ByteMail (Windows: tray/minimize; Android: Home / recent apps).
+- [x] Minimize or background Synesis (Windows: tray/minimize; Android: Home / recent apps).
 - [x] From another client, deliver new unread mail to inbox (or mark existing unread).
 - [x] Wait for push/IDLE or manual sync-now; OS toast shows sender + subject (or aggregate title for batch).
 - [x] Tap toast (if platform supports) → app focuses; message readable after sync.
@@ -72,7 +72,7 @@ Manual smoke list for W6 new-mail OS notifications on **Windows release builds**
 
 **Code:** Windows uses `DesktopController.isWindowFocused`; Android uses `AppForegroundTracker`.
 
-- [x] With ByteMail **focused and visible**, trigger new unread inbox mail.
+- [x] With Synesis **focused and visible**, trigger new unread inbox mail.
 - [x] **No** OS toast while foreground; inbox list updates normally after sync.
 - [x] Background app → same mail event **does** toast (regression pair with section above).
 

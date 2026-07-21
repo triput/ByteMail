@@ -11,11 +11,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/settings/account_color_picker.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/settings/account_color_picker.dart';
 
 /// Appearance-sheet section for the UI-P18 UI font family, size, and optional
 /// body text color override.

@@ -10,18 +10,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:bytemail/domain/address_match_scope.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/mailbox/message_list_projector.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/common/empty_state.dart';
-import 'package:bytemail/ui/mailbox/message_filter_bar.dart';
-import 'package:bytemail/ui/shell/address_scope_action.dart';
+import 'package:synesis/domain/address_match_scope.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/mailbox/message_list_projector.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/common/empty_state.dart';
+import 'package:synesis/ui/mailbox/message_filter_bar.dart';
+import 'package:synesis/ui/shell/address_scope_action.dart';
 
 typedef MessageSelectCallback =
     void Function(String id, {bool ctrl, bool shift});

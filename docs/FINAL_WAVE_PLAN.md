@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
 # Final Wave Plan — V1 Exit / Release Readiness
@@ -62,7 +62,7 @@ See [§6 Phase F — Checklist payback weekend](#6-phase-f--checklist-payback-we
 
 | Decision | Lock |
 | --- | --- |
-| Wordmark | **Option B — stealth lowercase** continuous `bytemail` (gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`) |
+| Wordmark | **Option B — stealth lowercase** continuous `synesis` (gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`) |
 | Icon | **Data Envelope v2** — [`branding_icon_data_envelope_v2.png`](branding/branding_icon_data_envelope_v2.png) |
 | Android splash | **Minimal only** — obsidian/jewel + centered icon v2; dismiss on **first Flutter frame**; **no** artificial delay |
 | Windows splash | **Skip** — rely on `.ico` + wordmark |
@@ -125,7 +125,7 @@ Phase G  FW-5 Manual E2E matrix      (finalize; living draft may start earlier)
 | Wordmark | Optional in-app / title-bar Option B (per branding README) |
 | Windows splash | **Do not add** |
 
-**Exit:** Packaged Windows + Android builds show ByteMail icon (not Flutter logo); Android cold start shows minimal splash then app; Windows has no dedicated splash.
+**Exit:** Packaged Windows + Android builds show Synesis icon (not Flutter logo); Android cold start shows minimal splash then app; Windows has no dedicated splash.
 
 **Key files (expected):** `windows/runner/resources/`, `android/app/src/main/res/`, `pubspec.yaml` (splash config if used), shell title-bar widgets, [branding/README.md](branding/README.md).
 
@@ -193,7 +193,7 @@ Polish after feature + filter + branding landings: dead code, API alignment with
 | --- | --- | --- |
 | **FW-3a** | Comprehensive end-user guide | Accounts, folders, compose, search, Focus, **filters**, settings, wipe, Win vs Android |
 | **FW-3b** | Quick start | Short path; cross-link FW-3a |
-| **FW-3c** | [`DART_IN_BYTEMAIL.md`](DART_IN_BYTEMAIL.md) | May land early; Page + Steve review |
+| **FW-3c** | [`DART_IN_SYNESIS.md`](DART_IN_SYNESIS.md) | May land early; Page + Steve review |
 | **FW-4** | Doc reality sweep | SPEC, ROADMAP, ARCHITECTURE, README, DEFECTS, V1_EXIT_CHECKLIST match ship |
 | **FW-6** | [`MULTI_AGENT_SYSTEM_PROMPT.md`](MULTI_AGENT_SYSTEM_PROMPT.md) | **After FW-4**; portable playbook; parallel with FW-5 OK |
 
@@ -380,7 +380,7 @@ When Phase B lands, Page adds a short SPEC subsection (or ROADMAP→SPEC pointer
 - **One-click clear active filters** (Pri-2 / [UI-P29](UI_ENHANCEMENT_SWEEP.md)) — chip × / toolbar Clear for ephemeral `userFilter`; does not delete saved presets
 - **Performance test suite** (Pri-2) — spreadsheet catalog (`perf_id`, budgets, harness); fixture-DB microbench first; friend-and-family traces later; mirror [TEST_INVENTORY.md](TEST_INVENTORY.md)
 - **Android focus track** (Pri-2) — battery (sync/IDLE/push/wakelocks/Doze), UX density vs Windows, widget/deep-link polish; device + AVD matrix spreadsheet-backed
-- **Project health dashboard** (Pri-3 / **adjacent tooling**) — reusable meta dashboard (waves, test inventory, future perf); not a ByteMail product feature — [POST_V1_HEALTH_DASHBOARD.md](POST_V1_HEALTH_DASHBOARD.md)
+- **Project health dashboard** (Pri-3 / **adjacent tooling**) — reusable meta dashboard (waves, test inventory, future perf); not a Synesis product feature — [POST_V1_HEALTH_DASHBOARD.md](POST_V1_HEALTH_DASHBOARD.md)
 
 ---
 

@@ -9,14 +9,14 @@
 
 import 'dart:async';
 
-import 'package:bytemail/desktop/detached_message_window_controller.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/ui/shell/html_email_body.dart';
-import 'package:bytemail/ui/shell/reading_pane.dart';
+import 'package:synesis/desktop/detached_message_window_controller.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/ui/shell/html_email_body.dart';
+import 'package:synesis/ui/shell/reading_pane.dart';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -79,7 +79,7 @@ class _DetachedMessageAppState extends State<DetachedMessageApp> {
       });
       final String title = (message?.subject.trim().isNotEmpty ?? false)
           ? message!.subject.trim()
-          : 'ByteMail message';
+          : 'Synesis message';
       await windowManager.setTitle(title);
     } catch (error) {
       if (mounted) {
@@ -130,13 +130,13 @@ class _DetachedMessageAppState extends State<DetachedMessageApp> {
     return RepositoryProvider<DetachedMessageWindowController>.value(
       value: const NoopDetachedMessageWindowController(),
       child: MaterialApp(
-        title: message?.subject ?? 'ByteMail message',
+        title: message?.subject ?? 'Synesis message',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.materialThemeFor(ThemeId.dark),
         // Subject lives in the OS title + ReadingPane chrome — no AppBar title.
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('ByteMail'),
+            title: const Text('Synesis'),
             actions: <Widget>[
               IconButton(
                 tooltip: 'Show main window',

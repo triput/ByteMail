@@ -7,11 +7,11 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

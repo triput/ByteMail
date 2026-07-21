@@ -9,15 +9,15 @@
 
 import 'dart:async';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/sync/sync_status_sheet.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/sync/sync_status_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';

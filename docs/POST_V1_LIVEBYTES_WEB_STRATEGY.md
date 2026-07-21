@@ -4,9 +4,9 @@
 
 | | |
 | --- | --- |
-| Repo | `F:\Code Repo\LiveBytes` (sibling of ByteMail) |
+| Repo | `F:\Code Repo\LiveBytes` (sibling of Synesis) |
 | Doc | [`docs/POST_V1_LIVEBYTES_WEB_STRATEGY.md`](../../LiveBytes/docs/POST_V1_LIVEBYTES_WEB_STRATEGY.md) |
 | Static site | [`../LiveBytes/website/`](../../LiveBytes/website/) |
-| Live | `https://livebytes.net/bytemail/` |
+| Live | `https://livebytes.net/synesis/` |
 
-ByteMail app branding (`docs/branding/`) stays in this repo. Web/legal content ownership is LiveBytes.
+Synesis app branding (`docs/branding/`) stays in this repo. Web/legal content ownership is LiveBytes.

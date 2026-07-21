@@ -7,10 +7,10 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/notifications/notification_platform.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/notifications/notification_platform.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
 
 /// Read-only notification prefs so [NotificationService] stays Cubit-free.
 abstract interface class NotificationSettingsSource {

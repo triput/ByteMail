@@ -9,7 +9,7 @@
 
 import 'dart:async';
 
-import 'package:bytemail/ui/shell/auto_mark_as_read.dart';
+import 'package:synesis/ui/shell/auto_mark_as_read.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Deterministic [Timer] double so dwell tests never wait on a real clock.

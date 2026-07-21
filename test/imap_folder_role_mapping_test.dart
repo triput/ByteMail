@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/protocol/imap_smtp_mail_provider.dart';
+import 'package:synesis/protocol/imap_smtp_mail_provider.dart';
 import 'package:enough_mail/enough_mail.dart';
 import 'package:flutter_test/flutter_test.dart';
 

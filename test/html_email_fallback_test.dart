@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/ui/shell/html_email_body.dart';
+import 'package:synesis/ui/shell/html_email_body.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

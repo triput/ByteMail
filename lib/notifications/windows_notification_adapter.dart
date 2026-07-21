@@ -7,14 +7,14 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/notifications/notification_platform.dart';
+import 'package:synesis/notifications/notification_platform.dart';
 import 'package:local_notifier/local_notifier.dart';
 
 /// Windows [local_notifier] adapter; optional click callback resumes the window.
 class WindowsNotificationAdapter implements NotificationPlatform {
   WindowsNotificationAdapter({
     this.onNotificationClick,
-    this.appName = 'ByteMail',
+    this.appName = 'Synesis',
   });
 
   final void Function()? onNotificationClick;

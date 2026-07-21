@@ -9,23 +9,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/desktop/keyboard_intents.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/sync/retention_service.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/ui/account/manage_accounts_sheet.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/settings/custom_theme_editor_sheet.dart';
-import 'package:bytemail/ui/settings/db_encryption_sheet.dart';
-import 'package:bytemail/ui/settings/focus_rules_sheet.dart';
-import 'package:bytemail/ui/settings/settings_export_import_controls.dart';
-import 'package:bytemail/ui/settings/sync_storage_sheet.dart';
-import 'package:bytemail/ui/settings/ui_font_settings_section.dart';
+import 'package:synesis/desktop/keyboard_intents.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/sync/retention_service.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/ui/account/manage_accounts_sheet.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/settings/custom_theme_editor_sheet.dart';
+import 'package:synesis/ui/settings/db_encryption_sheet.dart';
+import 'package:synesis/ui/settings/focus_rules_sheet.dart';
+import 'package:synesis/ui/settings/settings_export_import_controls.dart';
+import 'package:synesis/ui/settings/sync_storage_sheet.dart';
+import 'package:synesis/ui/settings/ui_font_settings_section.dart';
 
 Future<void> showAppearanceSheet(BuildContext context) {
   return showModalBottomSheet<void>(
@@ -275,7 +275,7 @@ Future<void> showAppearanceSheet(BuildContext context) {
                     contentPadding: EdgeInsets.zero,
                     title: const Text('Keyboard shortcuts'),
                     subtitle: Text(
-                      ByteMailKeyboardShortcuts.helpLabel,
+                      SynesisKeyboardShortcuts.helpLabel,
                       style: TextStyle(color: t.muted, fontSize: 12),
                     ),
                     value: settings.keyboardShortcutsEnabled,

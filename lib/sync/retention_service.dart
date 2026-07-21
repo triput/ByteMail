@@ -9,9 +9,9 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/repository/mail_repository.dart';
 
 class RetentionService {
   RetentionService(this._repository);

@@ -7,8 +7,8 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/focus/focus_header_map.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/focus/focus_header_map.dart';
 
 /// User-facing list filters stacked on top of folder/focus scope.
 ///

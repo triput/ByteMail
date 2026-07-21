@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
+import 'package:synesis/domain/models.dart';
 
 /// Result patch from [MessageActionService] / [MessageBodyCache] for cubit emit.
 class MailboxMutationResult {

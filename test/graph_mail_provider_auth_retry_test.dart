@@ -9,7 +9,7 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/protocol/graph_mail_provider.dart';
+import 'package:synesis/protocol/graph_mail_provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';

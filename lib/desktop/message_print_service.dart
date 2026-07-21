@@ -9,7 +9,7 @@
 
 import 'dart:typed_data';
 
-import 'package:bytemail/domain/models.dart';
+import 'package:synesis/domain/models.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -174,5 +174,5 @@ String _safeFileName(String value) {
   final String sanitized = value
       .replaceAll(RegExp(r'[<>:"/\\|?*\x00-\x1F]'), '_')
       .trim();
-  return sanitized.isEmpty ? 'ByteMail message' : sanitized;
+  return sanitized.isEmpty ? 'Synesis message' : sanitized;
 }

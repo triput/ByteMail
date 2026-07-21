@@ -11,26 +11,26 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bytemail/account/account_service.dart';
-import 'package:bytemail/app.dart';
-import 'package:bytemail/auth/oauth_config_resolver.dart';
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
-import 'package:bytemail/desktop/detached_message_app.dart';
-import 'package:bytemail/desktop/detached_message_window_controller.dart';
-import 'package:bytemail/desktop/windows_desktop_controller.dart';
-import 'package:bytemail/notifications/android_notification_adapter.dart';
-import 'package:bytemail/notifications/app_foreground_tracker.dart';
-import 'package:bytemail/notifications/notification_platform.dart';
-import 'package:bytemail/notifications/notification_service.dart';
-import 'package:bytemail/notifications/windows_notification_adapter.dart';
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/drift_mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/sync/provider_registry.dart';
-import 'package:bytemail/sync/retention_service.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/widgets/widget_snapshot_service.dart';
+import 'package:synesis/account/account_service.dart';
+import 'package:synesis/app.dart';
+import 'package:synesis/auth/oauth_config_resolver.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
+import 'package:synesis/desktop/detached_message_app.dart';
+import 'package:synesis/desktop/detached_message_window_controller.dart';
+import 'package:synesis/desktop/windows_desktop_controller.dart';
+import 'package:synesis/notifications/android_notification_adapter.dart';
+import 'package:synesis/notifications/app_foreground_tracker.dart';
+import 'package:synesis/notifications/notification_platform.dart';
+import 'package:synesis/notifications/notification_service.dart';
+import 'package:synesis/notifications/windows_notification_adapter.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/drift_mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/sync/provider_registry.dart';
+import 'package:synesis/sync/retention_service.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/widgets/widget_snapshot_service.dart';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -56,14 +56,14 @@ Future<void> main(List<String> args) async {
             const WindowOptions(
               size: Size(720, 900),
               center: true,
-              title: 'ByteMail message',
+              title: 'Synesis message',
             ),
             () async {
               await windowManager.show();
               await windowManager.focus();
             },
           );
-          final ByteMailDatabase database = ByteMailDatabase.open();
+          final SynesisDatabase database = SynesisDatabase.open();
           final DriftMailRepository repository = DriftMailRepository(database);
           runApp(
             DetachedMessageApp(
@@ -81,7 +81,7 @@ Future<void> main(List<String> args) async {
   }
 
   final SharedPreferences prefs = await SharedPreferences.getInstance();
-  final ByteMailDatabase database = ByteMailDatabase.open();
+  final SynesisDatabase database = SynesisDatabase.open();
   final DriftMailRepository repository = DriftMailRepository(database);
   final SecureCredentialStore credentialStore = SecureCredentialStore();
   // dart-define → OS env → oauth_local.json (see OAuthConfigResolver / README).
@@ -168,7 +168,7 @@ Future<void> main(List<String> args) async {
   );
 
   runApp(
-    ByteMailApp(
+    SynesisApp(
       prefs: prefs,
       repository: repository,
       syncEngine: syncEngine,

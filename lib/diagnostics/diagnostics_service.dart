@@ -9,7 +9,7 @@
 
 import 'dart:io';
 
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/repository/mail_repository.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 
@@ -40,7 +40,7 @@ class DiagnosticsService {
     final File file = File(
       path.join(
         directory.path,
-        'bytemail-diagnostics-${DateTime.now().toUtc().millisecondsSinceEpoch}.json',
+        'synesis-diagnostics-${DateTime.now().toUtc().millisecondsSinceEpoch}.json',
       ),
     );
     await file.writeAsString(contents, flush: true);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/models.dart';
+import 'package:synesis/domain/models.dart';
 
 /// Static sample mailbox for the UI shell (no sync/DB yet).
 abstract final class SampleMailbox {
@@ -83,7 +83,7 @@ abstract final class SampleMailbox {
       accountId: 'work',
       fromName: 'GitHub',
       fromAddress: 'noreply@github.com',
-      subject: '[bytemail] CI passed on main',
+      subject: '[synesis] CI passed on main',
       snippet: 'All checks were successful for commit 8f3a…',
       body: 'All checks were successful for commit 8f3a…',
       whenLabel: '09:02',

@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# ByteMail V1 Roadmap
+# Synesis V1 Roadmap
 
 | Field | Value |
 | --- | --- |
 | Status | Active — foundation implemented |
 | Spec | [SPEC.md](SPEC.md) v1.4 |
 | Exit checklist | [V1_EXIT_CHECKLIST.md](V1_EXIT_CHECKLIST.md) |
-| Product | ByteMail |
+| Product | Synesis |
 | Platforms (v1) | Windows, Android |
 | Last updated | 2026-07-18 (W4/W7 operator validation complete; Final wave Phase F landed) |
 
@@ -305,13 +305,13 @@ Feature work captured for scheduling. Requirements baseline in [SPEC.md](SPEC.md
 | **Pri-2** | **Per-account signatures** | **Landed (W4, 2026-07-18).** Named HTML/plain signatures per account + default/none; compose picker; signature image assets (CID→data-URI on send, [UI-P20](UI_ENHANCEMENT_SWEEP.md)). Operator validation complete; checkbox tick-off pending. |
 | **Pri-2** | **Desktop reading-pane layout (Outlook-style)** | **Landed (2026-07-17, W5).** `MailSplitLayout` + persisted `readingPanePosition` (right/top/bottom). Visual Focus collapse landed. Ctrl+F find, print/save EML, detached window wired. [W5_WINDOWS_CHECKLIST.md](W5_WINDOWS_CHECKLIST.md) passed (operator). Draggable split divider deferred (TB-9.1). Windows `.eml` Explorer ProgId deferred (packaging). |
 | **Pri-1** | **Optional encryption at rest (desktop DB)** | **Landed (2026-07-18, W7 spike → ship).** Locked: opt-in ([§11 open question #4](SPEC.md#111-assumptions-baked-into-this-draft)). Ships as **SQLite3MultipleCiphers** via `sqlite3` package hooks (`sqlcipher_flutter_libs` confirmed obsolete/no-op for our 3.x `sqlite3` — not needed); `DbEncryptionConfig` (prefs flag + `flutter_secure_storage` passphrase) + `DbEncryptionMigrator` (in-place `VACUUM INTO`/`rekey`, backup + integrity check + rollback) + "Encryption" settings sheet with irreversible-loss warning. Restart required to apply (no live DB hot-swap in V1 — documented boundary, not a gap). See [W7_SQLCIPHER_SPIKE.md](W7_SQLCIPHER_SPIKE.md). **Explicitly post-v1:** PGP/S/MIME message encryption ([Post-v1](#post-v1-not-scheduled)). TLS for IMAP/SMTP/Graph is baseline, not this item. |
-| **Pri-2** | **App icon & branding assets** | **Landed / wired (Final wave Phase A, 2026-07-18).** Locked: stealth lowercase `bytemail` wordmark (Option B) + **Data Envelope v2** icon + **minimal Android splash** (obsidian + centered v2; first-frame dismiss; **no Windows splash**). Windows `.ico`, Android adaptive + notification mono, in-app title-bar wordmark — see **[branding/README.md](branding/README.md)** + **[FINAL_WAVE_PLAN.md](FINAL_WAVE_PLAN.md)**. |
+| **Pri-2** | **App icon & branding assets** | **Landed / wired (Final wave Phase A, 2026-07-18).** Locked: stealth lowercase `synesis` wordmark (Option B) + **Data Envelope v2** icon + **minimal Android splash** (obsidian + centered v2; first-frame dismiss; **no Windows splash**). Windows `.ico`, Android adaptive + notification mono, in-app title-bar wordmark — see **[branding/README.md](branding/README.md)** + **[FINAL_WAVE_PLAN.md](FINAL_WAVE_PLAN.md)**. |
 | **Pri-3** | **Android emulator & device QA matrix** | **Not started.** Establish repeatable manual + CI smoke path on Android AVD alongside Windows. See [Android testing notes](#android-emulator-testing) below. V1 smoke only — deeper battery / UX track is **Post-V1** (below). |
 | **Pri-1** | **Hold / pause auto-mark for in-view message** (**Post-V1**) | **Not a V1 blocker** (marginally annoying dogfood). With Unread filter on, 5s auto-mark drops the open message from the list and closes the pane. Option to disable auto-mark for the current in-view email (and/or keep selection). **[UI-P30](UI_ENHANCEMENT_SWEEP.md)**; ties [UI-P28](UI_ENHANCEMENT_SWEEP.md). |
 | **Pri-2** | **One-click clear active filters** (**Post-V1**) | **Not a V1 blocker.** Dogfood gap after Final-wave Phase B — chip × / toolbar Clear that resets ephemeral `userFilter` in one click (does not delete saved presets). **[UI-P29](UI_ENHANCEMENT_SWEEP.md)**. |
 | **Pri-2** | **Performance test suite** (**Post-V1**) | **Not a V1 blocker.** Spreadsheet-cataloged like automated tests — columns: `perf_id`, area, platform, scenario, metric, budget, harness, status. Harness: microbench + timeline on fixture DBs first; friend-and-family traces later. Mirror [TEST_INVENTORY.md](TEST_INVENTORY.md) pattern; generate script later (same shape as `tool/generate_test_inventory.py`). |
 | **Pri-2** | **Android focus track** (**Post-V1**) | **Not a V1 blocker** (battery is the headline concern, still scheduled post-ship). Battery life (sync / IDLE / push / wakelocks / Doze), visual/UX density vs Windows, leftover widget / deep-link polish. Device + AVD matrix spreadsheet-backed (extends the Pri-3 smoke matrix above). Distinct from Final-wave branding wire-up and FW-5 E2E smoke. |
-| **Pri-3** | **Project health dashboard** (**Adjacent tooling** / Post-V1) | **Not a product feature — reusable meta tooling.** Docs-only idea for now; spin up after V1 while operator dogfoods. Surfaces wave/todo progress, test-inventory CSV signals, future perf-suite metrics, and related health. Reusable beyond ByteMail. Stub: **[POST_V1_HEALTH_DASHBOARD.md](POST_V1_HEALTH_DASHBOARD.md)**. Not a V1 or Final-wave deliverable. |
+| **Pri-3** | **Project health dashboard** (**Adjacent tooling** / Post-V1) | **Not a product feature — reusable meta tooling.** Docs-only idea for now; spin up after V1 while operator dogfoods. Surfaces wave/todo progress, test-inventory CSV signals, future perf-suite metrics, and related health. Reusable beyond Synesis. Stub: **[POST_V1_HEALTH_DASHBOARD.md](POST_V1_HEALTH_DASHBOARD.md)**. Not a V1 or Final-wave deliverable. |
 
 **Suggested sequencing:** account edit/remove (Pri-1, landed) → header details (Pri-3, landed) → junk filter (Pri-2, landed W1) → per-account retention (Pri-2, landed W3) → desktop reading-pane layout (Pri-2, landed W5) → **attachments + signatures (Pri-1/Pri-2, landed W4)** → **W7 hardening (landed)** → **Final wave** (branding + filter system + FW-1…FW-6). Encryption at rest shipped in W7; Android emulator QA continues into Final-wave E2E. **Post-V1:** one-click filter clear ([UI-P29](UI_ENHANCEMENT_SWEEP.md)) + performance test suite + Android focus track (Pri-2). **Adjacent tooling (Pri-3):** project health dashboard — [POST_V1_HEALTH_DASHBOARD.md](POST_V1_HEALTH_DASHBOARD.md).
 
@@ -350,10 +350,10 @@ Full phased kickoff (branding → filters → FW-* → checklist payback): **[FI
 | **FW-2** | Verify test code coverage | Measure (`flutter test --coverage` → `lcov` / IDE report); map gaps; raise floor on **critical paths**: sync engine, accounts/onboarding, `MailboxCubit`, Graph + IMAP providers, `MessageQuery` / filters | Target thresholds TBD after first measurement; block release on critical-path regressions |
 | **FW-3a** | User documentation — comprehensive guide | End-user guide: accounts, folders, compose, search, Focus, **filters**, settings, wipe, platform differences (Windows vs Android) | Can run **in parallel** with FW-3b, FW-3c, and FW-4 |
 | **FW-3b** | User documentation — quick start | Short “experienced user” path: install → add account → read/send → one settings tip; anti-TL;DR for users who skip long docs | Separate doc from FW-3a; cross-link both ways |
-| **FW-3c** | **Dart-in-ByteMail beginner guide** | Engineer/onboarding tour: how this repo uses Dart/Flutter (Cubits, Drift, SyncEngine, providers) — artifact [`DART_IN_BYTEMAIL.md`](DART_IN_BYTEMAIL.md) | Can land **early** once feature waves stabilize; owners **Page** (+ Steve review); cross-link from [README](../README.md) and [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md) |
+| **FW-3c** | **Dart-in-Synesis beginner guide** | Engineer/onboarding tour: how this repo uses Dart/Flutter (Cubits, Drift, SyncEngine, providers) — artifact [`DART_IN_SYNESIS.md`](DART_IN_SYNESIS.md) | Can land **early** once feature waves stabilize; owners **Page** (+ Steve review); cross-link from [README](../README.md) and [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md) |
 | **FW-4** | Final documentation update sweep | Align [SPEC.md](SPEC.md), this ROADMAP, [ARCHITECTURE_OVERVIEW.md](ARCHITECTURE_OVERVIEW.md), [README.md](../README.md), [DEFECTS.md](DEFECTS.md), and [V1_EXIT_CHECKLIST.md](V1_EXIT_CHECKLIST.md) with **shipped reality**; close or re-scope stale items | Parallel with FW-3a/3b; feeds checklist sign-off |
 | **FW-5** | Comprehensive manual E2E test matrix | Recommended manual tests in **versionable spreadsheet form** — e.g. `docs/V1_MANUAL_E2E_MATRIX.csv` (importable into Excel / Google Sheets). **Automated** coverage is already cataloged in [`V1_AUTOMATED_TEST_INVENTORY.csv`](V1_AUTOMATED_TEST_INVENTORY.csv) — see [TEST_INVENTORY.md](TEST_INVENTORY.md) | **Last** as formal gate, or start earlier as a **living checklist** during W7/Final QA and finalize here |
-| **FW-6** | Reusable multi-agent system prompt / playbook | Distill Steve→Jules→Renee→Page→Tesla phase-gate workflow, wave-close rituals (test inventory handoff, DEFECTS, Gold Master headers, local-first/BLoC/Isolates stack rules), and Cursor agent roster into a **portable system prompt** suitable for seeding future projects (not ByteMail-specific product rules only — generalize rituals). Suggested artifact: `docs/MULTI_AGENT_SYSTEM_PROMPT.md` (and optionally a trimmed `.cursor`/Copilot agent starter). Owners: **Steve** (orchestrate) + **Page** (draft) with Renee contributing QA/inventory ritual language. | After FW-4 doc sweep (so rituals match shipped process); can run parallel with FW-5 finalize |
+| **FW-6** | Reusable multi-agent system prompt / playbook | Distill Steve→Jules→Renee→Page→Tesla phase-gate workflow, wave-close rituals (test inventory handoff, DEFECTS, Gold Master headers, local-first/BLoC/Isolates stack rules), and Cursor agent roster into a **portable system prompt** suitable for seeding future projects (not Synesis-specific product rules only — generalize rituals). Suggested artifact: `docs/MULTI_AGENT_SYSTEM_PROMPT.md` (and optionally a trimmed `.cursor`/Copilot agent starter). Owners: **Steve** (orchestrate) + **Page** (draft) with Renee contributing QA/inventory ritual language. | After FW-4 doc sweep (so rituals match shipped process); can run parallel with FW-5 finalize |
 
 **Default sequencing:** **Phase A branding** → **Phase B filters** → FW-1 → FW-2 → (FW-3a ∥ FW-3b ∥ **FW-3c** ∥ FW-4) → (FW-5 ∥ FW-6); ~~Phase F checklist payback~~ **landed 2026-07-18**. Details: [FINAL_WAVE_PLAN.md](FINAL_WAVE_PLAN.md). **FW-3c** may land before FW-1 when waves are stable enough to avoid churn; FW-6 should run after FW-4; parallel with FW-5 is OK.
 
@@ -389,7 +389,7 @@ Each row: ID, area, precondition, steps, expected result, Graph / IMAP / both, W
 - **Wave-close ritual** — Renee test inventory delta → Page CSV/xlsx refresh → Steve land gate
 - **Quality & hygiene** — `DEFECTS.md` logging, Gold Master file headers, zero-placeholder code policy
 - **Execution policy** — human confirmation before mutating shell commands, build runners, and destructive file ops
-- **Stack phrasing** — stack-agnostic core where possible; ByteMail appendix for Flutter/Dart local-first, BLoC, and Isolates specifics
+- **Stack phrasing** — stack-agnostic core where possible; Synesis appendix for Flutter/Dart local-first, BLoC, and Isolates specifics
 
 ## Android emulator testing
 
@@ -405,7 +405,7 @@ Manual and automated validation on Android AVD complements the Windows-first dev
 
 ## Encryption options (discussion)
 
-ByteMail layers encryption at different levels. Only **DB at-rest (opt-in)** is in near-term scope; message-level crypto is explicitly deferred.
+Synesis layers encryption at different levels. Only **DB at-rest (opt-in)** is in near-term scope; message-level crypto is explicitly deferred.
 
 | Layer | Status | Options / notes |
 | --- | --- | --- |
@@ -419,7 +419,7 @@ ByteMail layers encryption at different levels. Only **DB at-rest (opt-in)** is 
 
 ## Risks / follow-ups
 
-- **Live Graph OAuth dogfood** — code path landed; operator must register Entra app + redirect URIs ([README](../README.md#microsoft-graph-entra-setup)) and run with `BYTEMAIL_GRAPH_CLIENT_ID`
+- **Live Graph OAuth dogfood** — code path landed; operator must register Entra app + redirect URIs ([README](../README.md#microsoft-graph-entra-setup)) and run with `SYNESIS_GRAPH_CLIENT_ID`
 - Deeper IMAP IDLE and Graph change notifications
 - Full Windows system tray native bindings beyond preference hooks
 - End-to-end tests against real Graph/IMAP accounts

@@ -9,14 +9,14 @@
 
 import 'dart:io';
 
-import 'package:bytemail/repository/database.dart';
+import 'package:synesis/repository/database.dart';
 import 'package:drift/drift.dart' show QueryRow;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as path;
 import 'package:sqlite3/sqlite3.dart';
 
-/// Creates a minimal schema version 4 ByteMail database on disk.
+/// Creates a minimal schema version 4 Synesis database on disk.
 void _writeSchemaV4Database(String filePath) {
   final Database db = sqlite3.open(filePath);
   try {
@@ -153,7 +153,7 @@ void main() {
 
   test('opens v4 file database and migrates to current schema (v6)', () async {
     final Directory tempDir = await Directory.systemTemp.createTemp(
-      'bytemail_v4_mig_',
+      'synesis_v4_mig_',
     );
     addTearDown(() async {
       if (await tempDir.exists()) {
@@ -161,10 +161,10 @@ void main() {
       }
     });
 
-    final String dbPath = path.join(tempDir.path, 'bytemail_v4.sqlite');
+    final String dbPath = path.join(tempDir.path, 'synesis_v4.sqlite');
     _writeSchemaV4Database(dbPath);
 
-    final ByteMailDatabase database = ByteMailDatabase(
+    final SynesisDatabase database = SynesisDatabase(
       NativeDatabase(File(dbPath)),
     );
     addTearDown(database.close);

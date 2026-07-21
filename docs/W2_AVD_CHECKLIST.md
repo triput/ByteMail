@@ -4,7 +4,7 @@ Short Android Emulator smoke list for pull-to-refresh, list swipes, threads, and
 
 ## Setup
 
-- Launch an Android emulator (API 34+ preferred) and run ByteMail with at least one synced account and a few inbox messages.
+- Launch an Android emulator (API 34+ preferred) and run Synesis with at least one synced account and a few inbox messages.
 - Confirm Appearance → **Android swipe actions** defaults: swipe right = Archive, swipe left = Delete.
 
 ## Pull-to-refresh

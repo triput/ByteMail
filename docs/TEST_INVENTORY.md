@@ -1,6 +1,6 @@
 # Automated Test Inventory
 
-ByteMail tracks **automated** unit, widget, and BLoC tests in a versionable inventory so coverage can be evaluated by wave, tier, and component without duplicating file lists in every checklist. Manual smoke and E2E runs stay in wave checklists and (future) the manual E2E matrix — not here.
+Synesis tracks **automated** unit, widget, and BLoC tests in a versionable inventory so coverage can be evaluated by wave, tier, and component without duplicating file lists in every checklist. Manual smoke and E2E runs stay in wave checklists and (future) the manual E2E matrix — not here.
 
 ## Artifacts
 

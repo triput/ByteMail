@@ -7,7 +7,7 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/query/message_query.dart';
+import 'package:synesis/query/message_query.dart';
 import 'package:equatable/equatable.dart';
 
 /// Maximum named saved filters stored on device (soft cap).

@@ -9,11 +9,11 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/theme/custom_theme.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/theme/custom_theme.dart';
 
 class OutboxItem {
   const OutboxItem({

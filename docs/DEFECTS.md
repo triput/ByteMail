@@ -1,4 +1,4 @@
-# ByteMail Defects Log
+# Synesis Defects Log
 
 | Priority | Meaning |
 | --- | --- |
@@ -449,7 +449,7 @@ Detached reader shows one content header; body remains readable (HTML or plain f
 Duplicate subject chrome; empty body with unsupported_platform error; Show main was a no-op.
 
 **Resolution**  
-Slim AppBar title to “ByteMail” and set OS title from the subject; on WebView `unsupported_platform` / `environment_creation_failed`, fall back to **`flutter_widget_from_html`** (layout-preserving in-app HTML, not plain text); hide “Open in new window” in detached mode; register `show_main_window` on the main engine. Tests: `test/html_email_fallback_test.dart`. True WebView2 parity in secondary engines remains a known platform limit.
+Slim AppBar title to “Synesis” and set OS title from the subject; on WebView `unsupported_platform` / `environment_creation_failed`, fall back to **`flutter_widget_from_html`** (layout-preserving in-app HTML, not plain text); hide “Open in new window” in detached mode; register `show_main_window` on the main engine. Tests: `test/html_email_fallback_test.dart`. True WebView2 parity in secondary engines remains a known platform limit.
 
 ---
 

@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/protocol/thread_id.dart';
+import 'package:synesis/protocol/thread_id.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

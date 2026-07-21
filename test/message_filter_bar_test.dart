@@ -1,8 +1,8 @@
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/mailbox/message_filter_bar.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/mailbox/message_filter_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

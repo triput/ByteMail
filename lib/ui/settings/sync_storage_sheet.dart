@@ -9,13 +9,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/sync/retention_service.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/sync/retention_service.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
 
 Future<void> showSyncStorageSheet(BuildContext context) {
   return showModalBottomSheet<void>(

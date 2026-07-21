@@ -1,14 +1,14 @@
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift_mail_repository.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift_mail_repository.dart';
+import 'package:synesis/repository/mail_repository.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Future<DriftMailRepository> _openTestRepo() async {
-  final ByteMailDatabase database = ByteMailDatabase(NativeDatabase.memory());
+  final SynesisDatabase database = SynesisDatabase(NativeDatabase.memory());
   final DriftMailRepository repo = DriftMailRepository(database);
   await repo.upsertAccount(
     const MailAccount(
@@ -77,7 +77,7 @@ Future<DriftMailRepository> _openTestRepo() async {
 }
 
 Future<DriftMailRepository> _openWipeTestRepo() async {
-  final ByteMailDatabase database = ByteMailDatabase(NativeDatabase.memory());
+  final SynesisDatabase database = SynesisDatabase(NativeDatabase.memory());
   final DriftMailRepository repo = DriftMailRepository(database);
   await repo.upsertAccount(
     const MailAccount(

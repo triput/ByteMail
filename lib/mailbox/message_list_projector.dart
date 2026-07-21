@@ -7,8 +7,8 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/settings/app_settings_state.dart';
 
 /// How (or whether) list rows are bucketed by calendar date.
 enum DateGroupingMode {

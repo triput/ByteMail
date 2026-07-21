@@ -7,16 +7,16 @@
 // Last Update: 2026-07-16
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift_mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift_mail_repository.dart';
 import 'package:drift/drift.dart' show QueryRow, Value;
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-Future<ByteMailDatabase> _openMemoryDb() async {
-  final ByteMailDatabase database = ByteMailDatabase(NativeDatabase.memory());
+Future<SynesisDatabase> _openMemoryDb() async {
+  final SynesisDatabase database = SynesisDatabase(NativeDatabase.memory());
   // Force migration / onCreate before assertions.
   await database.customSelect('SELECT 1').get();
   return database;
@@ -27,7 +27,7 @@ void main() {
     test(
       'fresh database is schema version 6 with new tables and columns',
       () async {
-        final ByteMailDatabase database = await _openMemoryDb();
+        final SynesisDatabase database = await _openMemoryDb();
         addTearDown(database.close);
 
         final int userVersion =
@@ -106,7 +106,7 @@ void main() {
     );
 
     test('seeds default sync profile on create', () async {
-      final ByteMailDatabase database = await _openMemoryDb();
+      final SynesisDatabase database = await _openMemoryDb();
       addTearDown(database.close);
 
       final QueryRow row = await database
@@ -127,7 +127,7 @@ void main() {
     test(
       'wipeAccount removes attachments and signatures for that account',
       () async {
-        final ByteMailDatabase database = await _openMemoryDb();
+        final SynesisDatabase database = await _openMemoryDb();
         final DriftMailRepository repo = DriftMailRepository(database);
         addTearDown(repo.close);
 
@@ -288,7 +288,7 @@ void main() {
     );
 
     test('upsert preserves starred and snoozedUntil on header sync', () async {
-      final ByteMailDatabase database = await _openMemoryDb();
+      final SynesisDatabase database = await _openMemoryDb();
       final DriftMailRepository repo = DriftMailRepository(database);
       addTearDown(repo.close);
 

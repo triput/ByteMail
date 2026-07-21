@@ -1,4 +1,4 @@
-# ByteMail V1 Exit Checklist
+# Synesis V1 Exit Checklist
 
 Use this checklist to verify the SPEC milestone exits before the v1 release.
 

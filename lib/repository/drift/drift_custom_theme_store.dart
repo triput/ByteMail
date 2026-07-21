@@ -9,9 +9,9 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/repository/database.dart' hide CustomTheme;
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/repository/database.dart' hide CustomTheme;
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_id.dart';
 import 'package:drift/drift.dart';
 
 class DriftCustomThemeStore {
@@ -20,7 +20,7 @@ class DriftCustomThemeStore {
     required void Function() notify,
   }) : _notify = notify;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
 
   Future<List<CustomTheme>> listCustomThemes() async {

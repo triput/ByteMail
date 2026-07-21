@@ -11,14 +11,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/settings/account_color_picker.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/settings/account_color_picker.dart';
 
 /// Token names editable in the compact creation editor (UI-P16 minimum set).
 const List<String> _kEditableCustomThemeTokens = <String>[

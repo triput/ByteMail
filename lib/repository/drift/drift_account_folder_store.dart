@@ -7,10 +7,10 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/drift/drift_account_mapper.dart';
-import 'package:bytemail/repository/drift/drift_mappers.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/drift/drift_account_mapper.dart';
+import 'package:synesis/repository/drift/drift_mappers.dart';
 import 'package:drift/drift.dart';
 
 class DriftAccountFolderStore {
@@ -19,7 +19,7 @@ class DriftAccountFolderStore {
     required void Function() notify,
   }) : _notify = notify;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
 
 

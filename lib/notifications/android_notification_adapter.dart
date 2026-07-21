@@ -7,7 +7,7 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/notifications/notification_platform.dart';
+import 'package:synesis/notifications/notification_platform.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 /// Android [flutter_local_notifications] adapter; tap resumes the app only.
@@ -16,12 +16,12 @@ class AndroidNotificationAdapter implements NotificationPlatform {
     FlutterLocalNotificationsPlugin? plugin,
   }) : _plugin = plugin ?? FlutterLocalNotificationsPlugin();
 
-  static const String channelId = 'bytemail_new_mail';
+  static const String channelId = 'synesis_new_mail';
   static const String channelName = 'New mail';
   static const int coalesceNotificationId = 1001;
 
   /// Monochrome status-bar icon (Data Envelope silhouette).
-  static const String smallIcon = '@drawable/ic_stat_bytemail';
+  static const String smallIcon = '@drawable/ic_stat_synesis';
 
   final FlutterLocalNotificationsPlugin _plugin;
   bool _initialized = false;

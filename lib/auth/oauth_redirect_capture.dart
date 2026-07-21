@@ -84,7 +84,7 @@ class LoopbackOAuthRedirectCapture implements OAuthRedirectCapture {
       final Uri requestUri = request.requestedUri;
       const String html =
           '<!DOCTYPE html><html><body><h1>You can close this window</h1>'
-          '<p>ByteMail sign-in finished.</p></body></html>';
+          '<p>Synesis sign-in finished.</p></body></html>';
       request.response
         ..statusCode = HttpStatus.ok
         ..headers.contentType = ContentType.html
@@ -146,8 +146,8 @@ class LoopbackOAuthRedirectCapture implements OAuthRedirectCapture {
     }
     throw StateError(
       'Could not open OAuth callback listener on $host:$port. '
-      'Another ByteMail sign-in may still be waiting, or the port is in use. '
-      'Close other ByteMail windows, wait a few seconds, and try again. '
+      'Another Synesis sign-in may still be waiting, or the port is in use. '
+      'Close other Synesis windows, wait a few seconds, and try again. '
       '($lastError)',
     );
   }
@@ -165,11 +165,11 @@ class LoopbackOAuthRedirectCapture implements OAuthRedirectCapture {
   }
 }
 
-/// Android deep-link listener (default Graph: `bytemail://auth`).
+/// Android deep-link listener (default Graph: `synesis://auth`).
 class AppLinksOAuthRedirectCapture implements OAuthRedirectCapture {
   AppLinksOAuthRedirectCapture({
     AppLinks? appLinks,
-    this.scheme = 'bytemail',
+    this.scheme = 'synesis',
     this.host = 'auth',
   }) : _appLinks = appLinks ?? AppLinks();
 
@@ -250,7 +250,7 @@ class AppLinksOAuthRedirectCapture implements OAuthRedirectCapture {
 OAuthRedirectCapture createPlatformOAuthRedirectCapture({
   int loopbackPort = 8765,
   String loopbackPath = '/callback',
-  String appLinkScheme = 'bytemail',
+  String appLinkScheme = 'synesis',
   String appLinkHost = 'auth',
 }) {
   if (Platform.isAndroid) {

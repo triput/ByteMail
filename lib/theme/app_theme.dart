@@ -9,8 +9,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Known [AppTheme.materialThemeFor] `uiFontFamily` values (UI-P18). Null
 /// keeps the app default IBM Plex Sans body / Fraunces display pairing.

@@ -7,10 +7,10 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift_mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift_mail_repository.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -348,7 +348,7 @@ void main() {
     late int nowMs;
 
     setUp(() async {
-      final ByteMailDatabase database = ByteMailDatabase(
+      final SynesisDatabase database = SynesisDatabase(
         NativeDatabase.memory(),
       );
       repo = DriftMailRepository(database);
@@ -517,7 +517,7 @@ void main() {
     late DriftMailRepository repo;
 
     setUp(() async {
-      final ByteMailDatabase database = ByteMailDatabase(
+      final SynesisDatabase database = SynesisDatabase(
         NativeDatabase.memory(),
       );
       repo = DriftMailRepository(database);

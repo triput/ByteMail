@@ -7,9 +7,9 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/notifications/notification_platform.dart';
-import 'package:bytemail/notifications/notification_service.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/notifications/notification_platform.dart';
+import 'package:synesis/notifications/notification_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class _FakeSettings implements NotificationSettingsSource {

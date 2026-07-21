@@ -10,8 +10,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/oauth_public_clients.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/oauth_public_clients.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
@@ -22,7 +22,7 @@ import 'package:path_provider/path_provider.dart';
 /// 1. `--dart-define` / `String.fromEnvironment`
 /// 2. Process environment (`Platform.environment`)
 /// 3. Local `oauth_local.json` (cwd, next to exe, or app support)
-/// 4. [OAuthPublicClients] (ByteMail-owned public client IDs)
+/// 4. [OAuthPublicClients] (Synesis-owned public client IDs)
 class OAuthConfigResolver {
   OAuthConfigResolver({
     Map<String, String>? environment,
@@ -48,18 +48,18 @@ class OAuthConfigResolver {
     final Map<String, String> local = _readLocalMap();
     return GraphAuthConfig(
       clientId: _firstNonEmpty(<String?>[
-        const String.fromEnvironment('BYTEMAIL_GRAPH_CLIENT_ID'),
-        _environment['BYTEMAIL_GRAPH_CLIENT_ID'],
-        local['BYTEMAIL_GRAPH_CLIENT_ID'],
+        const String.fromEnvironment('SYNESIS_GRAPH_CLIENT_ID'),
+        _environment['SYNESIS_GRAPH_CLIENT_ID'],
+        local['SYNESIS_GRAPH_CLIENT_ID'],
         OAuthPublicClients.graphClientId,
       ]),
       tenant: _firstNonEmpty(<String?>[
         const String.fromEnvironment(
-          'BYTEMAIL_GRAPH_TENANT',
+          'SYNESIS_GRAPH_TENANT',
           defaultValue: '',
         ),
-        _environment['BYTEMAIL_GRAPH_TENANT'],
-        local['BYTEMAIL_GRAPH_TENANT'],
+        _environment['SYNESIS_GRAPH_TENANT'],
+        local['SYNESIS_GRAPH_TENANT'],
         OAuthPublicClients.graphTenant,
         'common',
       ], fallback: 'common'),
@@ -70,15 +70,15 @@ class OAuthConfigResolver {
     final Map<String, String> local = _readLocalMap();
     return GoogleAuthConfig(
       clientId: _firstNonEmpty(<String?>[
-        const String.fromEnvironment('BYTEMAIL_GOOGLE_CLIENT_ID'),
-        _environment['BYTEMAIL_GOOGLE_CLIENT_ID'],
-        local['BYTEMAIL_GOOGLE_CLIENT_ID'],
+        const String.fromEnvironment('SYNESIS_GOOGLE_CLIENT_ID'),
+        _environment['SYNESIS_GOOGLE_CLIENT_ID'],
+        local['SYNESIS_GOOGLE_CLIENT_ID'],
         OAuthPublicClients.googleClientId,
       ]),
       clientSecret: _firstNonEmpty(<String?>[
-        const String.fromEnvironment('BYTEMAIL_GOOGLE_CLIENT_SECRET'),
-        _environment['BYTEMAIL_GOOGLE_CLIENT_SECRET'],
-        local['BYTEMAIL_GOOGLE_CLIENT_SECRET'],
+        const String.fromEnvironment('SYNESIS_GOOGLE_CLIENT_SECRET'),
+        _environment['SYNESIS_GOOGLE_CLIENT_SECRET'],
+        local['SYNESIS_GOOGLE_CLIENT_SECRET'],
         OAuthPublicClients.googleClientSecret,
       ]),
     );

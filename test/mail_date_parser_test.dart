@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/protocol/mail_date_parser.dart';
+import 'package:synesis/protocol/mail_date_parser.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

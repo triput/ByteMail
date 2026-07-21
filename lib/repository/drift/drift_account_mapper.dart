@@ -7,8 +7,8 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/database.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/database.dart';
 import 'package:flutter/material.dart';
 
 /// Maps a Drift [Account] row to domain [MailAccount], converting stored

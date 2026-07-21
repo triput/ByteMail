@@ -7,8 +7,8 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:flutter/material.dart';
 
 /// Token names accepted in [CustomTheme.tokenOverrides], matching the public

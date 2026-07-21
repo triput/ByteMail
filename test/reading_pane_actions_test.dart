@@ -1,10 +1,10 @@
-import 'package:bytemail/desktop/detached_message_window_controller.dart';
-import 'package:bytemail/domain/address_match_scope.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/shell/reading_pane.dart';
+import 'package:synesis/desktop/detached_message_window_controller.dart';
+import 'package:synesis/domain/address_match_scope.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/shell/reading_pane.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';

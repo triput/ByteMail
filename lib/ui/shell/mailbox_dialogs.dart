@@ -8,11 +8,11 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
-import 'package:bytemail/ui/shell/move_folder_dialog.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/ui/shell/move_folder_dialog.dart';
 
 /// Confirms creating a missing system folder (e.g. Archive / Junk) on the server.
 Future<bool> confirmCreateSystemFolder(

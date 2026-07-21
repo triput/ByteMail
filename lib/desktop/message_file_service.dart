@@ -11,8 +11,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mime/eml_codec.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mime/eml_codec.dart';
 import 'package:file_picker/file_picker.dart';
 
 Future<String?> saveMessageAsEml(MailMessage message) {
@@ -57,5 +57,5 @@ String safeEmlFileName(String value) {
   final String sanitized = value
       .replaceAll(RegExp(r'[<>:"/\\|?*\x00-\x1F]'), '_')
       .trim();
-  return sanitized.isEmpty ? 'ByteMail message' : sanitized;
+  return sanitized.isEmpty ? 'Synesis message' : sanitized;
 }

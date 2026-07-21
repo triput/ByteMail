@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/outbox/send_error_messages.dart';
+import 'package:synesis/outbox/send_error_messages.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

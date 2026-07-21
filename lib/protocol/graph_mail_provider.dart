@@ -12,9 +12,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:bytemail/focus/focus_header_map.dart';
-import 'package:bytemail/mime/outgoing_envelope.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
+import 'package:synesis/focus/focus_header_map.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
+import 'package:synesis/protocol/mail_provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
 

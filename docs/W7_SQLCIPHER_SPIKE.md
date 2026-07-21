@@ -76,9 +76,9 @@ than blocking this wave:
 - **Live DB hot-swap is intentionally out of scope for V1.** Toggling
   encryption on/off migrates the file in place (`VACUUM INTO` + `PRAGMA
   rekey`, per Drift's documented recipe) but does **not** attempt to
-  hot-swap the already-open `ByteMailDatabase` connection held by the running
+  hot-swap the already-open `SynesisDatabase` connection held by the running
   app's DI graph — that is a much larger blast-radius change (every Bloc/
-  Cubit holds a `MailRepository` built on top of one `ByteMailDatabase`).
+  Cubit holds a `MailRepository` built on top of one `SynesisDatabase`).
   Instead, the settings sheet finishes the file migration, persists the new
   config, and prompts a restart (`DesktopController.quit()` on Windows,
   `SystemNavigator.pop()` elsewhere). This is a deliberate, documented

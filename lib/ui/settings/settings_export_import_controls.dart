@@ -13,12 +13,12 @@ import 'dart:typed_data';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/settings_export_service.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/settings_export_service.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Appearance-sheet section with Export/Import buttons for the UI-P17
 /// versioned settings backup (excludes account credentials/secrets).
@@ -51,8 +51,8 @@ class _SettingsExportImportControlsState
         customThemes: themes,
       );
       final String? path = await FilePicker.saveFile(
-        dialogTitle: 'Export ByteMail settings',
-        fileName: 'bytemail_settings.json',
+        dialogTitle: 'Export Synesis settings',
+        fileName: 'synesis_settings.json',
         type: FileType.custom,
         allowedExtensions: const <String>['json'],
         bytes: Uint8List.fromList(utf8.encode(json)),
@@ -83,7 +83,7 @@ class _SettingsExportImportControlsState
     });
     try {
       final FilePickerResult? result = await FilePicker.pickFiles(
-        dialogTitle: 'Import ByteMail settings',
+        dialogTitle: 'Import Synesis settings',
         type: FileType.custom,
         allowedExtensions: const <String>['json'],
         withData: true,

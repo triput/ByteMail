@@ -194,11 +194,11 @@ class WindowsDesktopController
   Future<void> _ensureTray() async {
     try {
       await trayManager.setIcon(trayIconAsset);
-      await trayManager.setToolTip('ByteMail');
+      await trayManager.setToolTip('Synesis');
       await trayManager.setContextMenu(
         Menu(
           items: <MenuItem>[
-            MenuItem(key: 'show_window', label: 'Show ByteMail'),
+            MenuItem(key: 'show_window', label: 'Show Synesis'),
             MenuItem.separator(),
             MenuItem(key: 'exit_app', label: 'Quit'),
           ],

@@ -11,8 +11,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:bytemail/auth/oauth_redirect_capture.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
+import 'package:synesis/auth/oauth_redirect_capture.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
@@ -28,15 +28,15 @@ class GraphAuthConfig {
   const GraphAuthConfig({this.clientId = '', this.tenant = 'common'});
 
   factory GraphAuthConfig.fromEnvironment() => const GraphAuthConfig(
-    clientId: String.fromEnvironment('BYTEMAIL_GRAPH_CLIENT_ID'),
+    clientId: String.fromEnvironment('SYNESIS_GRAPH_CLIENT_ID'),
     tenant: String.fromEnvironment(
-      'BYTEMAIL_GRAPH_TENANT',
+      'SYNESIS_GRAPH_TENANT',
       defaultValue: 'common',
     ),
   );
 
   static const String desktopRedirectUri = 'http://127.0.0.1:8765/callback';
-  static const String androidRedirectUri = 'bytemail://auth';
+  static const String androidRedirectUri = 'synesis://auth';
 
   static const List<String> scopes = <String>[
     'openid',
@@ -73,12 +73,12 @@ class GoogleAuthConfig {
   const GoogleAuthConfig({this.clientId = '', this.clientSecret = ''});
 
   factory GoogleAuthConfig.fromEnvironment() => const GoogleAuthConfig(
-    clientId: String.fromEnvironment('BYTEMAIL_GOOGLE_CLIENT_ID'),
-    clientSecret: String.fromEnvironment('BYTEMAIL_GOOGLE_CLIENT_SECRET'),
+    clientId: String.fromEnvironment('SYNESIS_GOOGLE_CLIENT_ID'),
+    clientSecret: String.fromEnvironment('SYNESIS_GOOGLE_CLIENT_SECRET'),
   );
 
   static const String desktopRedirectUri = 'http://127.0.0.1:8766/callback';
-  static const String androidRedirectUri = 'bytemail://google-auth';
+  static const String androidRedirectUri = 'synesis://google-auth';
 
   /// Full mail scope for classic IMAP/SMTP XOAUTH2, plus OpenID profile claims.
   static const List<String> scopes = <String>[
@@ -330,7 +330,7 @@ class OAuthIdentityManager {
         return accessToken;
       }
       throw StateError(
-        'Cannot refresh Graph token: BYTEMAIL_GRAPH_CLIENT_ID is not configured.',
+        'Cannot refresh Graph token: SYNESIS_GRAPH_CLIENT_ID is not configured.',
       );
     }
 
@@ -385,7 +385,7 @@ class OAuthIdentityManager {
         return accessToken;
       }
       throw StateError(
-        'Cannot refresh Google token: BYTEMAIL_GOOGLE_CLIENT_ID is not configured.',
+        'Cannot refresh Google token: SYNESIS_GOOGLE_CLIENT_ID is not configured.',
       );
     }
 
@@ -420,7 +420,7 @@ class OAuthIdentityManager {
     if (!config.isConfigured) {
       throw StateError(
         'Microsoft Graph client ID is not configured. Pass '
-        '--dart-define=BYTEMAIL_GRAPH_CLIENT_ID=... or use manual token entry.',
+        '--dart-define=SYNESIS_GRAPH_CLIENT_ID=... or use manual token entry.',
       );
     }
 
@@ -484,7 +484,7 @@ class OAuthIdentityManager {
     if (!googleConfig.isConfigured) {
       throw StateError(
         'Google client ID is not configured. Pass '
-        '--dart-define=BYTEMAIL_GOOGLE_CLIENT_ID=... or use the IMAP tab '
+        '--dart-define=SYNESIS_GOOGLE_CLIENT_ID=... or use the IMAP tab '
         'with an app password.',
       );
     }
@@ -543,7 +543,7 @@ class OAuthIdentityManager {
       '$required — Gmail IMAP will fail with AUTHENTICATIONFAILED.\n\n'
       'In Google Cloud → OAuth consent screen, add the Gmail scope '
       '"$required" (and enable the Gmail API), ensure your account is a '
-      'test user, then remove this account in ByteMail and Sign in with '
+      'test user, then remove this account in Synesis and Sign in with '
       'Google again (consent must be re-granted).',
     );
   }

@@ -10,11 +10,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,9 +28,9 @@ class WidgetSnapshotService {
   static const String listSnapshotId = 'mail_list';
   static const String counterSnapshotId = 'mail_counter';
   static const String actionSnapshotId = 'mail_actions';
-  static const String listBridgeKey = 'byte_mail_widget.list';
-  static const String counterBridgeKey = 'byte_mail_widget.counter';
-  static const String actionBridgeKey = 'byte_mail_widget.actions';
+  static const String listBridgeKey = 'synesis_widget.list';
+  static const String counterBridgeKey = 'synesis_widget.counter';
+  static const String actionBridgeKey = 'synesis_widget.actions';
 
   final MailRepository _repository;
   final SharedPreferences? _preferences;
@@ -142,7 +142,7 @@ class WidgetSnapshotService {
       HomeWidget.saveWidgetData<String>(actionBridgeKey, actionPayload),
     ]);
     await HomeWidget.updateWidget(
-      qualifiedAndroidName: 'com.bytemail.bytemail.ByteMailWidgetProvider',
+      qualifiedAndroidName: 'net.livebytes.synesis.SynesisWidgetProvider',
     );
   }
 }

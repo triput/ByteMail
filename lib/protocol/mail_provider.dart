@@ -9,7 +9,7 @@
 
 import 'dart:typed_data';
 
-import 'package:bytemail/mime/outgoing_envelope.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
 
 /// Feature set advertised by a [MailProvider].
 class MailCapabilities {

@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# ByteMail branding concepts
+# Synesis branding concepts
 
 Operator-locked color tokens and visual concepts for Final-wave packaging. **Wired** into Windows `.ico`, Android adaptive launcher, notification mono, and minimal Android splash (Final wave Phase A, 2026-07-18).
 
-**Product web page:** static site + mothership strategy live in sibling [`../../../LiveBytes`](../../../LiveBytes) (`website/` → `https://livebytes.net/bytemail/`). See [`../POST_V1_LIVEBYTES_WEB_STRATEGY.md`](../POST_V1_LIVEBYTES_WEB_STRATEGY.md) (stub) and LiveBytes `docs/`.
+**Product web page:** static site + mothership strategy live in sibling [`../../../LiveBytes`](../../../LiveBytes) (`website/` → `https://livebytes.net/synesis/`). See [`../POST_V1_LIVEBYTES_WEB_STRATEGY.md`](../POST_V1_LIVEBYTES_WEB_STRATEGY.md) (stub) and LiveBytes `docs/`.
 
 ## Color tokens (locked)
 
@@ -22,7 +22,7 @@ Operator-locked color tokens and visual concepts for Final-wave packaging. **Wir
 
 | Option | Status | Notes |
 | --- | --- | --- |
-| **B — Stealth Lowercase** | **LOCKED + wired** | Continuous `bytemail`; glyph gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`. In-app title-bar via `BytemailWordmark`. |
+| **B — Stealth Lowercase** | **LOCKED + wired** | Continuous `synesis`; glyph gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`. In-app title-bar via `SynesisWordmark`. |
 | A — Structural Capitalization | Archive / alternate | Bold `BYTE` (`#E0AAFF`) + italic `mail` (`#00B4D8`). Keep on file; not shipping default. |
 
 ## Icon status
@@ -55,9 +55,9 @@ Operator-locked color tokens and visual concepts for Final-wave packaging. **Wir
 | --- | --- |
 | Windows `.ico` | `windows/runner/resources/app_icon.ico` (16–256 multi-size from v2) |
 | Android adaptive | `mipmap-anydpi-v26/ic_launcher.xml` + density foregrounds; background `#7B2CBF` |
-| Notification mono | `drawable-*/ic_stat_bytemail.png`; Dart uses `@drawable/ic_stat_bytemail` |
+| Notification mono | `drawable-*/ic_stat_synesis.png`; Dart uses `@drawable/ic_stat_synesis` |
 | Android splash | Obsidian + centered v2; first-frame dismiss; **no** Windows splash |
-| In-app wordmark | `lib/ui/branding/bytemail_wordmark.dart` in title bar |
+| In-app wordmark | `lib/ui/branding/synesis_wordmark.dart` in title bar |
 
 Do not ship Flutter defaults — packaged builds use Data Envelope v2.
 
@@ -69,7 +69,7 @@ Assets were generated with Python/Pillow from the locked v2 PNG (manual export; 
 
 | File | Caption |
 | --- | --- |
-| [`branding_wordmark_option_b.png`](branding_wordmark_option_b.png) | **Option B — Stealth Lowercase (LOCKED):** continuous `bytemail` in a Space Grotesk–like face; glyph gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`. |
+| [`branding_wordmark_option_b.png`](branding_wordmark_option_b.png) | **Option B — Stealth Lowercase (LOCKED):** continuous `synesis` in a Space Grotesk–like face; glyph gradient `#7B2CBF` → `#3A7BD5` → `#00B4D8`. |
 | [`branding_wordmark_option_a.png`](branding_wordmark_option_a.png) | **Option A — Structural Capitalization (archive):** bold geometric `BYTE` (`#E0AAFF`) + lighter italic `mail` (`#00B4D8`) on obsidian. |
 
 ### Data Envelope icons
@@ -86,14 +86,14 @@ Assets were generated with Python/Pillow from the locked v2 PNG (manual export; 
 
 | File | Caption |
 | --- | --- |
-| [`branding_header_mockup_b.png`](branding_header_mockup_b.png) | Desktop chrome with **locked** Option B gradient `bytemail`. |
+| [`branding_header_mockup_b.png`](branding_header_mockup_b.png) | Desktop chrome with **locked** Option B gradient `synesis`. |
 | [`branding_header_mockup_a.png`](branding_header_mockup_a.png) | Same chrome with Option A wordmark (archive reference). |
 
 Earlier exploratory icons (`branding_concept_*`, `branding_wordmark_concept.png`) are superseded for the production decision path; keep only if useful for archive.
 
 ## Operator decisions (locked)
 
-1. ~~Pick wordmark A or B~~ → **B locked** (stealth lowercase `bytemail`).
+1. ~~Pick wordmark A or B~~ → **B locked** (stealth lowercase `synesis`).
 2. ~~Confirm Data Envelope variant~~ → **v2 locked**.
 3. ~~Splash approach~~ → **Minimal Android only** (obsidian/jewel + centered icon v2; first-frame dismiss; no artificial delay). **Skip Windows splash** (`.ico` + wordmark suffice).
 4. ~~Wire locked wordmark B + icon v2 + Android splash~~ → **Done** (Final wave Phase A, 2026-07-18).

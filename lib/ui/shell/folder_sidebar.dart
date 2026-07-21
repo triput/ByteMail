@@ -8,10 +8,10 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
 
 class FolderSidebar extends StatelessWidget {
   const FolderSidebar({

@@ -165,7 +165,7 @@ W7  HARDENING & OPTIONAL — **LANDED** (2026-07-18) ─────────
 | Google OAuth | **Landed** | PKCE + XOAUTH2 IMAP/SMTP; `test/oauth_identity_manager_test.dart` |
 | IMAP autoconfig (TC-8) | **Landed** | Thunderbird ISPDB + `/.well-known` lookup; `test/imap_autoconfig_test.dart` |
 
-**W1 unlock:** W1 message actions may proceed now that W0 schema and OAuth code paths are landed. **Live Graph OAuth E2E** (add account → sync → send in a real mailbox) remains the operator checkpoint: register Entra app + redirect URIs, run with `BYTEMAIL_GRAPH_CLIENT_ID`, then confirm dogfood. Google OAuth and autoconfig do not block W1.
+**W1 unlock:** W1 message actions may proceed now that W0 schema and OAuth code paths are landed. **Live Graph OAuth E2E** (add account → sync → send in a real mailbox) remains the operator checkpoint: register Entra app + redirect URIs, run with `SYNESIS_GRAPH_CLIENT_ID`, then confirm dogfood. Google OAuth and autoconfig do not block W1.
 
 **Priority (unchanged):** Microsoft Graph OAuth must be dogfood-ready before W4; W1 can start in parallel with operator Entra validation.
 

@@ -9,10 +9,10 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/outbox/outbox_recipients.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/outbox/outbox_recipients.dart';
 
-export 'package:bytemail/outbox/outbox_recipients.dart'
+export 'package:synesis/outbox/outbox_recipients.dart'
     show parseAddressList, splitOutboxRecipients;
 
 enum ComposeMode { newMessage, reply, replyAll, forward }

@@ -10,18 +10,18 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/compose/outgoing_message_builder.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/outbox/send_error_messages.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/compose/compose_draft.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/compose/outgoing_message_builder.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/outbox/send_error_messages.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/compose/compose_draft.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -114,7 +114,7 @@ ComposeDraft _draftFromOutbox(OutboxItem item) {
     subject: item.subject,
     bodyPlain: OutgoingMessageBuilder.unpackPlain(item.body),
     bodyHtml: () {
-      const String marker = '\n---bytemail-html---\n';
+      const String marker = '\n---synesis-html---\n';
       final int idx = item.body.indexOf(marker);
       if (idx < 0) {
         return null;

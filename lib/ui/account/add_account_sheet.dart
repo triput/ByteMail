@@ -11,13 +11,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:uuid/uuid.dart';
-import 'package:bytemail/account/account_service.dart';
-import 'package:bytemail/account/imap_autoconfig.dart';
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/settings/account_color_picker.dart';
+import 'package:synesis/account/account_service.dart';
+import 'package:synesis/account/imap_autoconfig.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/settings/account_color_picker.dart';
 
 Future<void> showAddAccountSheet(BuildContext context) {
   final t = tokensOf(context);
@@ -520,9 +520,9 @@ class _AddAccountFormState extends State<_AddAccountForm>
                         'Microsoft browser sign-in is not configured yet.\n\n'
                         'Add your Entra Application (client) ID to '
                         'oauth_local.json in the project root (see '
-                        'oauth_local.json.example), set BYTEMAIL_GRAPH_CLIENT_ID '
+                        'oauth_local.json.example), set SYNESIS_GRAPH_CLIENT_ID '
                         'in the environment, or pass '
-                        '--dart-define=BYTEMAIL_GRAPH_CLIENT_ID=… then restart.\n\n'
+                        '--dart-define=SYNESIS_GRAPH_CLIENT_ID=… then restart.\n\n'
                         'Until then you can paste a Graph access token below, '
                         'or use IMAP / Other.',
                         style: TextStyle(color: t.muted, fontSize: 13),
@@ -575,7 +575,7 @@ class _AddAccountFormState extends State<_AddAccountForm>
                     ] else ...[
                       Text(
                         'Google browser sign-in is not configured yet.\n\n'
-                        'Add BYTEMAIL_GOOGLE_CLIENT_ID to oauth_local.json '
+                        'Add SYNESIS_GOOGLE_CLIENT_ID to oauth_local.json '
                         '(see oauth_local.json.example), set it in the '
                         'environment, or pass --dart-define, then restart.\n\n'
                         'You can still add Gmail on the IMAP / Other tab with an '

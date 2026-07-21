@@ -9,15 +9,15 @@
 
 import 'dart:io';
 
-import 'package:bytemail/auth/oauth_config_resolver.dart';
-import 'package:bytemail/auth/oauth_public_clients.dart';
+import 'package:synesis/auth/oauth_config_resolver.dart';
+import 'package:synesis/auth/oauth_public_clients.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   late Directory tempDir;
 
   setUp(() async {
-    tempDir = await Directory.systemTemp.createTemp('bytemail_oauth_');
+    tempDir = await Directory.systemTemp.createTemp('synesis_oauth_');
   });
 
   tearDown(() async {
@@ -29,13 +29,13 @@ void main() {
   test('prefers OS environment over local file', () {
     final File local = File('${tempDir.path}/oauth_local.json')
       ..writeAsStringSync(
-        '{"BYTEMAIL_GRAPH_CLIENT_ID":"from-file",'
-        '"BYTEMAIL_GOOGLE_CLIENT_ID":"google-from-file"}',
+        '{"SYNESIS_GRAPH_CLIENT_ID":"from-file",'
+        '"SYNESIS_GOOGLE_CLIENT_ID":"google-from-file"}',
       );
     final OAuthConfigResolver resolver = OAuthConfigResolver(
       environment: <String, String>{
-        'BYTEMAIL_GRAPH_CLIENT_ID': 'from-env',
-        'BYTEMAIL_GOOGLE_CLIENT_ID': 'google-from-env',
+        'SYNESIS_GRAPH_CLIENT_ID': 'from-env',
+        'SYNESIS_GOOGLE_CLIENT_ID': 'google-from-env',
       },
       localFiles: <File>[local],
     );
@@ -46,9 +46,9 @@ void main() {
   test('falls back to oauth_local.json when env empty', () {
     final File local = File('${tempDir.path}/oauth_local.json')
       ..writeAsStringSync(
-        '{"BYTEMAIL_GRAPH_CLIENT_ID":"file-graph",'
-        '"BYTEMAIL_GRAPH_TENANT":"contoso",'
-        '"BYTEMAIL_GOOGLE_CLIENT_ID":"file-google.apps.googleusercontent.com"}',
+        '{"SYNESIS_GRAPH_CLIENT_ID":"file-graph",'
+        '"SYNESIS_GRAPH_TENANT":"contoso",'
+        '"SYNESIS_GOOGLE_CLIENT_ID":"file-google.apps.googleusercontent.com"}',
       );
     final OAuthConfigResolver resolver = OAuthConfigResolver(
       environment: const <String, String>{},
@@ -89,8 +89,8 @@ void main() {
   test('local file overrides shipped public clients', () {
     final File local = File('${tempDir.path}/oauth_local.json')
       ..writeAsStringSync(
-        '{"BYTEMAIL_GRAPH_CLIENT_ID":"override-graph",'
-        '"BYTEMAIL_GOOGLE_CLIENT_ID":"override-google"}',
+        '{"SYNESIS_GRAPH_CLIENT_ID":"override-graph",'
+        '"SYNESIS_GOOGLE_CLIENT_ID":"override-google"}',
       );
     final OAuthConfigResolver resolver = OAuthConfigResolver(
       environment: const <String, String>{},

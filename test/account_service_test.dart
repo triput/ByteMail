@@ -1,10 +1,10 @@
-import 'package:bytemail/account/account_service.dart';
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/auth/secure_credential_store.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/widgets/widget_snapshot_service.dart';
+import 'package:synesis/account/account_service.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/auth/secure_credential_store.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/widgets/widget_snapshot_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

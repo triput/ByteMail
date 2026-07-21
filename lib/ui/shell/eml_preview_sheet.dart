@@ -7,11 +7,11 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mime/eml_codec.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/ui/shell/reading_pane.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mime/eml_codec.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/ui/shell/reading_pane.dart';
 import 'package:flutter/material.dart';
 
 Future<void> showEmlPreviewSheet(

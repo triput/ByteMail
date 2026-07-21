@@ -12,29 +12,29 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:bytemail/account/account_service.dart';
-import 'package:bytemail/auth/oauth_identity_manager.dart';
-import 'package:bytemail/desktop/detached_message_window_controller.dart';
-import 'package:bytemail/desktop/message_file_service.dart';
-import 'package:bytemail/desktop/windows_desktop_controller.dart';
-import 'package:bytemail/mailbox/message_action_service.dart';
-import 'package:bytemail/mailbox/message_body_cache.dart';
-import 'package:bytemail/mime/eml_codec.dart';
-import 'package:bytemail/notifications/app_foreground_tracker.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/sync/retention_service.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/shell/eml_preview_sheet.dart';
-import 'package:bytemail/ui/shell/mail_workspace.dart';
+import 'package:synesis/account/account_service.dart';
+import 'package:synesis/auth/oauth_identity_manager.dart';
+import 'package:synesis/desktop/detached_message_window_controller.dart';
+import 'package:synesis/desktop/message_file_service.dart';
+import 'package:synesis/desktop/windows_desktop_controller.dart';
+import 'package:synesis/mailbox/message_action_service.dart';
+import 'package:synesis/mailbox/message_body_cache.dart';
+import 'package:synesis/mime/eml_codec.dart';
+import 'package:synesis/notifications/app_foreground_tracker.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/sync/retention_service.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/shell/eml_preview_sheet.dart';
+import 'package:synesis/ui/shell/mail_workspace.dart';
 
-class ByteMailApp extends StatelessWidget {
-  const ByteMailApp({
+class SynesisApp extends StatelessWidget {
+  const SynesisApp({
     super.key,
     required this.prefs,
     required this.repository,
@@ -230,7 +230,7 @@ class _ThemedMailAppState extends State<_ThemedMailApp> {
             ? _loadedTokens
             : null;
     return MaterialApp(
-      title: 'ByteMail',
+      title: 'Synesis',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.materialThemeFor(
         settings.themeId,

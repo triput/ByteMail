@@ -12,12 +12,12 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/desktop/keyboard_intents.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/desktop/keyboard_intents.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
 
 /// Callbacks for mailbox actions triggered by hardware shortcuts.
 class MailboxShortcutActions {
@@ -57,33 +57,33 @@ bool handleMailboxHardwareKey(
   if (!settings.keyboardShortcutsEnabled) {
     return false;
   }
-  if (ByteMailKeyboardShortcuts.isEditingText) {
+  if (SynesisKeyboardShortcuts.isEditingText) {
     return false;
   }
 
   final MailboxCubit cubit = context.read<MailboxCubit>();
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyJ,
   )) {
     moveMailboxSelection(context, cubit.state, 1);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyK,
   )) {
     moveMailboxSelection(context, cubit.state, -1);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyN,
   )) {
     actions.onCompose();
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyF,
     shift: true,
@@ -91,21 +91,21 @@ bool handleMailboxHardwareKey(
     actions.onSearch();
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyF,
   )) {
     actions.onFindInMessage();
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyU,
   )) {
     unawaited(cubit.toggleSelectedUnread());
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isControlChord(
+  if (SynesisKeyboardShortcuts.isControlChord(
     event,
     LogicalKeyboardKey.keyM,
     shift: true,
@@ -119,18 +119,18 @@ bool handleMailboxHardwareKey(
   }
 
   // Bare action keys (skipped while editing text; Ctrl chords handled above).
-  if (ByteMailKeyboardShortcuts.isBareKey(
+  if (SynesisKeyboardShortcuts.isBareKey(
     event,
     LogicalKeyboardKey.slash,
   )) {
     actions.onSearch();
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isKeymapHelpKey(event)) {
+  if (SynesisKeyboardShortcuts.isKeymapHelpKey(event)) {
     actions.onShowHelp();
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(
+  if (SynesisKeyboardShortcuts.isBareKey(
     event,
     LogicalKeyboardKey.delete,
     shift: true,
@@ -138,7 +138,7 @@ bool handleMailboxHardwareKey(
     actions.onPermanentDelete(cubit);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.delete)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.delete)) {
     if (cubit.isViewingTrash) {
       actions.onPermanentDelete(cubit);
     } else {
@@ -146,11 +146,11 @@ bool handleMailboxHardwareKey(
     }
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyE)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyE)) {
     unawaited(cubit.archiveSelected());
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(
+  if (SynesisKeyboardShortcuts.isBareKey(
     event,
     LogicalKeyboardKey.keyR,
     shift: true,
@@ -158,19 +158,19 @@ bool handleMailboxHardwareKey(
     actions.onReply(cubit, replyAll: true);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyR)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyR)) {
     actions.onReply(cubit);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyF)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyF)) {
     actions.onForward(cubit);
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyS)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyS)) {
     unawaited(cubit.toggleStarSelected());
     return true;
   }
-  if (ByteMailKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyB)) {
+  if (SynesisKeyboardShortcuts.isBareKey(event, LogicalKeyboardKey.keyB)) {
     actions.onSnooze(cubit);
     return true;
   }

@@ -12,37 +12,37 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/desktop/message_file_service.dart';
-import 'package:bytemail/domain/address_match_scope.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mime/eml_codec.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/ui/branding/bytemail_wordmark.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
-import 'package:bytemail/ui/settings/appearance_sheet.dart';
-import 'package:bytemail/ui/settings/notifications_sheet.dart';
-import 'package:bytemail/ui/shell/eml_preview_sheet.dart';
-import 'package:bytemail/ui/shell/folder_sidebar.dart';
-import 'package:bytemail/ui/shell/mail_split_layout.dart';
-import 'package:bytemail/ui/shell/keymap_help_sheet.dart';
-import 'package:bytemail/ui/shell/mailbox_dialogs.dart';
-import 'package:bytemail/ui/shell/mailbox_shortcuts.dart';
-import 'package:bytemail/ui/shell/message_list_pane.dart';
-import 'package:bytemail/ui/shell/message_headers_sheet.dart';
-import 'package:bytemail/ui/shell/reading_pane.dart';
-import 'package:bytemail/ui/shell/snooze_dialog.dart';
-import 'package:bytemail/ui/account/add_account_sheet.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
-import 'package:bytemail/ui/compose/compose_sheet.dart';
-import 'package:bytemail/ui/outbox/outbox_sheet.dart';
-import 'package:bytemail/ui/search/search_sheet.dart';
-import 'package:bytemail/ui/sync/sync_status_sheet.dart';
-import 'package:bytemail/sync/sync_engine.dart';
+import 'package:synesis/desktop/message_file_service.dart';
+import 'package:synesis/domain/address_match_scope.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mime/eml_codec.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/ui/branding/synesis_wordmark.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/ui/settings/appearance_sheet.dart';
+import 'package:synesis/ui/settings/notifications_sheet.dart';
+import 'package:synesis/ui/shell/eml_preview_sheet.dart';
+import 'package:synesis/ui/shell/folder_sidebar.dart';
+import 'package:synesis/ui/shell/mail_split_layout.dart';
+import 'package:synesis/ui/shell/keymap_help_sheet.dart';
+import 'package:synesis/ui/shell/mailbox_dialogs.dart';
+import 'package:synesis/ui/shell/mailbox_shortcuts.dart';
+import 'package:synesis/ui/shell/message_list_pane.dart';
+import 'package:synesis/ui/shell/message_headers_sheet.dart';
+import 'package:synesis/ui/shell/reading_pane.dart';
+import 'package:synesis/ui/shell/snooze_dialog.dart';
+import 'package:synesis/ui/account/add_account_sheet.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
+import 'package:synesis/ui/compose/compose_sheet.dart';
+import 'package:synesis/ui/outbox/outbox_sheet.dart';
+import 'package:synesis/ui/search/search_sheet.dart';
+import 'package:synesis/ui/sync/sync_status_sheet.dart';
+import 'package:synesis/sync/sync_engine.dart';
 
 class MailWorkspace extends StatefulWidget {
   const MailWorkspace({super.key});
@@ -53,7 +53,7 @@ class MailWorkspace extends StatefulWidget {
 
 class _MailWorkspaceState extends State<MailWorkspace> {
   late final FocusNode _workspaceFocus = FocusNode(
-    debugLabel: 'ByteMailWorkspace',
+    debugLabel: 'SynesisWorkspace',
   );
   bool _syncBusy = false;
   bool _findInMessageRequested = false;
@@ -734,7 +734,7 @@ class _TitleBar extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const BytemailWordmark(fontSize: 16),
+          const SynesisWordmark(fontSize: 16),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Text('/', style: TextStyle(color: t.muted)),

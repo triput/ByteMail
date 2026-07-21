@@ -15,8 +15,8 @@
 
 import 'dart:io';
 
-import 'package:bytemail/repository/db_encryption_config.dart';
-import 'package:bytemail/repository/db_encryption_migrator.dart';
+import 'package:synesis/repository/db_encryption_config.dart';
+import 'package:synesis/repository/db_encryption_migrator.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 import 'package:sqlite3/sqlite3.dart';

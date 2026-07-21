@@ -421,7 +421,7 @@ Optional: Graph `markAsJunk` API if move insufficient — evaluate during implem
 | Piece | Choice |
 | --- | --- |
 | Flow | **Authorization code + PKCE** |
-| Windows redirect | Loopback `http://127.0.0.1:{port}/callback` or custom scheme `bytemail://auth` |
+| Windows redirect | Loopback `http://127.0.0.1:{port}/callback` or custom scheme `synesis://auth` |
 | Android redirect | App link / custom scheme |
 | Library | Evaluate `flutter_appauth`, `aad_oauth`, or thin `url_launcher` + local HTTP listener |
 | Token storage | Existing `OAuthIdentityManager`; implement refresh via `oauth2` package |
@@ -491,7 +491,7 @@ Deduplicate by `message.id`; respect per-account mute settings (basic toggle in 
 ### TA-6 exit criteria
 
 - [ ] New mail after sync shows notification on Android AVD + Windows
-- [ ] Tap notification opens app to message (deep link `bytemail://message/{id}` optional)
+- [ ] Tap notification opens app to message (deep link `synesis://message/{id}` optional)
 - [ ] No notification for read mail or re-sync duplicates
 - [ ] Widget refresh still independent of Flutter wake
 - [ ] Tests: dedupe unit test; mock `NotificationService`

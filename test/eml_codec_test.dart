@@ -1,5 +1,5 @@
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mime/eml_codec.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mime/eml_codec.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

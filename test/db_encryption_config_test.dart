@@ -7,7 +7,7 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/repository/db_encryption_config.dart';
+import 'package:synesis/repository/db_encryption_config.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -190,12 +190,12 @@ void main() {
     test('databasePath joins the support directory and file name', () {
       expect(
         DbEncryptionPaths.databasePath(p.join('support', 'dir')),
-        p.join('support', 'dir', 'bytemail.sqlite'),
+        p.join('support', 'dir', 'synesis.sqlite'),
       );
     });
 
     test('migrationTempPath is distinct from the source path', () {
-      final String dbPath = p.join('support', 'dir', 'bytemail.sqlite');
+      final String dbPath = p.join('support', 'dir', 'synesis.sqlite');
       final String tempPath = DbEncryptionPaths.migrationTempPath(dbPath);
       expect(tempPath, isNot(dbPath));
       expect(tempPath, contains(dbPath));
@@ -203,7 +203,7 @@ void main() {
     });
 
     test('migrationBackupPath is distinct from the source and temp paths', () {
-      final String dbPath = p.join('support', 'dir', 'bytemail.sqlite');
+      final String dbPath = p.join('support', 'dir', 'synesis.sqlite');
       final String backupPath = DbEncryptionPaths.migrationBackupPath(dbPath);
       final String tempPath = DbEncryptionPaths.migrationTempPath(dbPath);
       expect(backupPath, isNot(dbPath));

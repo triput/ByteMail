@@ -9,12 +9,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
 
 Future<void> showNotificationsSheet(BuildContext context) {
   return showModalBottomSheet<void>(
@@ -40,7 +40,7 @@ Future<void> showNotificationsSheet(BuildContext context) {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'OS alerts for new unread inbox mail when ByteMail is '
+                    'OS alerts for new unread inbox mail when Synesis is '
                     'in the background.',
                     style: TextStyle(color: t.muted, fontSize: 12),
                   ),

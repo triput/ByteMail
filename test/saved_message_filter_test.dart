@@ -7,9 +7,9 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -10,7 +10,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bytemail/domain/models.dart';
+import 'package:synesis/domain/models.dart';
 import 'package:enough_mail/enough_mail.dart';
 
 /// Parsed, local-only representation of an opened `.eml` file.
@@ -37,7 +37,7 @@ class EmlPreview {
 /// Serializes a cached message into a self-contained RFC 822 document.
 ///
 /// Provider headers that describe the original envelope are retained, while
-/// MIME content headers are rebuilt because ByteMail stores the decoded body.
+/// MIME content headers are rebuilt because Synesis stores the decoded body.
 String exportMessageToEml(MailMessage message) {
   final bool html = _looksLikeHtml(message.body);
   final StringBuffer output = StringBuffer();

@@ -1,19 +1,19 @@
-# ByteMail Competitive Analysis
+# Synesis Competitive Analysis
 
 | Field | Value |
 | --- | --- |
 | Status | Research snapshot |
 | Compared clients | Outlook (new), Aqua Mail, Thunderbird, FairEmail / K-9, Spark |
-| ByteMail baseline | SPEC v1.4 + ROADMAP (2026-07-16) + codebase audit |
+| Synesis baseline | SPEC v1.4 + ROADMAP (2026-07-16) + codebase audit |
 | Last updated | 2026-07-16 |
 
-This document maps **what ByteMail has today** against **what users expect** from mature email clients. It is input for backlog prioritization — not a commitment to parity with Outlook or Spark.
+This document maps **what Synesis has today** against **what users expect** from mature email clients. It is input for backlog prioritization — not a commitment to parity with Outlook or Spark.
 
 ---
 
 ## 1. Competitor profiles
 
-| Client | Primary platform | Positioning | Relevance to ByteMail |
+| Client | Primary platform | Positioning | Relevance to Synesis |
 | --- | --- | --- | --- |
 | **Outlook (new)** | Windows, Web, Mobile | Microsoft 365 default; Copilot AI; deep Exchange/Graph integration; PST, shared mailboxes, calendar/contacts | **Primary desktop benchmark** for power users and Exchange shops |
 | **Aqua Mail** | Android | Highly customizable IMAP/POP3/EWS client; 300+ settings; privacy (no cloud storage of mail); premium S/MIME, Exchange push | **Primary Android benchmark** for power-user IMAP customization |
@@ -23,11 +23,11 @@ This document maps **what ByteMail has today** against **what users expect** fro
 
 ---
 
-## 2. ByteMail today (honest inventory)
+## 2. Synesis today (honest inventory)
 
 ### 2.1 Landed strengths (differentiators or solid foundation)
 
-| Area | ByteMail status |
+| Area | Synesis status |
 | --- | --- |
 | **Local-first architecture** | UI reads SQLite; sync in background — matches FairEmail/Thunderbird philosophy, stronger than cloud-centric Spark |
 | **Dual protocol** | Graph + IMAP/SMTP via `MailProvider` adapters |
@@ -87,7 +87,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.1 Core mail operations (table stakes)
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- | --- |
 | Read HTML email | ◐ WebView | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Read plain text | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -114,7 +114,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.2 Organization & discovery
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- | --- |
 | Unified inbox | ✅ | ✅ | ✅ Smart Folder | ✅ | ✅ | ✅ |
 | Per-account isolation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -132,7 +132,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.3 Sync, offline & accounts
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- | --- |
 | Offline read | ✅ strong | ✅ 30d+ | ✅ preload | ✅ | ✅ configurable | ◐ |
 | Offline compose/send | ✅ outbox | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -151,7 +151,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.4 Security & privacy
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- | --- |
 | TLS in transit | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Secure credential store | ✅ | ✅ | ✅ local | ✅ | ✅ | ◐ cloud sync |
@@ -166,7 +166,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.5 Notifications & widgets
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- | --- |
 | **New-mail notifications** | ◐ desktop hook | ✅ | ✅ per-account | ✅ | ✅ granular | ✅ |
 | Per-account notification rules | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -178,7 +178,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.6 Desktop power UX
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | Spark |
 | --- | --- | --- | --- | --- | --- |
 | Keyboard shortcuts | ◐ | ✅ | — | ✅ | ◐ |
 | **Reading pane position** | ❌ fixed right | ✅ bottom/right | — | ✅ | ◐ |
@@ -193,7 +193,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### 3.7 Mobile UX
 
-| Feature | ByteMail | Outlook | Aqua Mail | FairEmail/K-9 | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | FairEmail/K-9 | Spark |
 | --- | --- | --- | --- | --- | --- |
 | Swipe actions (archive/delete) | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Pull to refresh | ◐ manual sync | ✅ | ✅ | ✅ | ✅ |
@@ -201,9 +201,9 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 | **Swipe between messages** | ❌ | ✅ | ✅ | — | ✅ |
 | Back gesture | Flutter default | ✅ | ✅ | ✅ | ✅ |
 
-### 3.8 Integrations & ecosystem (mostly post-v1 for ByteMail)
+### 3.8 Integrations & ecosystem (mostly post-v1 for Synesis)
 
-| Feature | ByteMail | Outlook | Aqua Mail | Thunderbird | Spark |
+| Feature | Synesis | Outlook | Aqua Mail | Thunderbird | Spark |
 | --- | --- | --- | --- | --- | --- |
 | Calendar | 🚫 | ✅ native | ✅ Exchange | ✅ CalDAV | ✅ built-in |
 | Contacts | 🚫 | ✅ | ✅ Exchange | ✅ CardDAV | ◐ |
@@ -217,7 +217,7 @@ Legend: ✅ Landed · ◐ Partial / stub · ❌ Missing · 🚫 Out of scope (v1
 
 ### Tier A — Table stakes (users will notice immediately)
 
-Without these, ByteMail does not feel like a complete mail client:
+Without these, Synesis does not feel like a complete mail client:
 
 1. **Attachments** — view, download, compose (already Pri-1 backlog)
 2. **Reply, Reply-all, Forward** — wire reading pane + message context
@@ -243,11 +243,11 @@ Without these, ByteMail does not feel like a complete mail client:
 19. Rich text compose (minimum: bold, links, inline reply quote)
 20. Templates / canned responses (SPEC §7.6)
 
-### Tier C — Power-user & differentiation (ByteMail can win here)
+### Tier C — Power-user & differentiation (Synesis can win here)
 
 Already aligned or extend:
 
-| ByteMail angle | vs competitors |
+| Synesis angle | vs competitors |
 | --- | --- |
 | **Local-first + retention dials** | Stronger than Spark/Outlook cloud cache story |
 | **Transparent sync jobs + diagnostics** | FairEmail-level trust, better UX |
@@ -282,7 +282,7 @@ Already aligned or extend:
                             │
          Thunderbird ●      │      ● Outlook (new)
                             │
-              ByteMail ◆    │         ● Spark
+              Synesis ◆    │         ● Spark
               (target)      │
                             │
     Local / privacy ◄───────┼───────► Cloud / AI / teams
@@ -291,7 +291,7 @@ Already aligned or extend:
                     Simplicity / defaults
 ```
 
-**ByteMail's viable niche:** Local-first, privacy-respecting, cross-platform (Windows + Android) mail for people who want **Aqua/FairEmail-level control** without Android-only lock-in, and **Outlook-level desktop ergonomics** without M365 lock-in — *once Tier A/B gaps close*.
+**Synesis's viable niche:** Local-first, privacy-respecting, cross-platform (Windows + Android) mail for people who want **Aqua/FairEmail-level control** without Android-only lock-in, and **Outlook-level desktop ergonomics** without M365 lock-in — *once Tier A/B gaps close*.
 
 **Where not to compete in v1:** Copilot, calendar hub, team inboxes, PST legacy — different products.
 
@@ -340,7 +340,7 @@ Items **not yet** in ROADMAP that competitors commonly ship:
 - [Thunderbird Exchange support (blog)](https://blog.thunderbird.net/2025/11/thunderbird-adds-native-microsoft-exchange-email-support/)
 - [K-9 Mail on Google Play](https://play.google.com/store/apps/details?id=com.fsck.k9)
 - [Spark vs Gmail (2026)](https://sparkmailapp.com/blog/spark-vs-gmail)
-- ByteMail: [SPEC.md](SPEC.md), [ROADMAP.md](ROADMAP.md), codebase audit 2026-07-16
+- Synesis: [SPEC.md](SPEC.md), [ROADMAP.md](ROADMAP.md), codebase audit 2026-07-16
 
 ---
 

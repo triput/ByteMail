@@ -1,5 +1,5 @@
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/focus/focus.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/focus/focus.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

@@ -9,18 +9,18 @@
 
 import 'dart:async';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/domain/sync_profile.dart';
-import 'package:bytemail/focus/focus.dart';
-import 'package:bytemail/mailbox/mailbox_mutation_result.dart';
-import 'package:bytemail/mailbox/message_action_service.dart'
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/domain/sync_profile.dart';
+import 'package:synesis/focus/focus.dart';
+import 'package:synesis/mailbox/mailbox_mutation_result.dart';
+import 'package:synesis/mailbox/message_action_service.dart'
     show MailboxMutationApply;
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/repository/drift/drift_mappers.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
-import 'package:bytemail/ui/mailbox/message_body_normalizer.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/repository/drift/drift_mappers.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/ui/mailbox/message_body_normalizer.dart';
 
 /// Loads message bodies and raw headers, updating local cache and focus scores.
 class MessageBodyCache {

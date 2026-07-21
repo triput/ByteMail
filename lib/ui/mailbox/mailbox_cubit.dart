@@ -10,20 +10,20 @@
 import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/address_match_scope.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mailbox/mailbox_mutation_result.dart';
-import 'package:bytemail/mailbox/message_action_service.dart';
-import 'package:bytemail/mailbox/message_body_cache.dart';
-import 'package:bytemail/mailbox/message_list_projector.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/settings/app_settings_cubit.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/ui/mailbox/mailbox_state.dart';
+import 'package:synesis/domain/address_match_scope.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mailbox/mailbox_mutation_result.dart';
+import 'package:synesis/mailbox/message_action_service.dart';
+import 'package:synesis/mailbox/message_body_cache.dart';
+import 'package:synesis/mailbox/message_list_projector.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/settings/app_settings_cubit.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/ui/mailbox/mailbox_state.dart';
 
-export 'package:bytemail/mailbox/message_action_service.dart'
+export 'package:synesis/mailbox/message_action_service.dart'
     show SystemFolderConfirm;
 
 class MailboxCubit extends Cubit<MailboxState> {

@@ -8,11 +8,11 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/mailbox/saved_filters_sheet.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/mailbox/saved_filters_sheet.dart';
 
 /// Compact chip row for list filters. Focus chips stay independent of this bar.
 class MessageFilterBar extends StatelessWidget {

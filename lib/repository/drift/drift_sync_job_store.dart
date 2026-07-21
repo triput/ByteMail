@@ -9,9 +9,9 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/drift/drift_mappers.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/drift/drift_mappers.dart';
+import 'package:synesis/repository/mail_repository.dart';
 import 'package:drift/drift.dart';
 import 'package:uuid/uuid.dart';
 
@@ -23,7 +23,7 @@ class DriftSyncJobStore {
   }) : _notify = notify,
        _countQueuedOutbox = countQueuedOutbox;
 
-  final ByteMailDatabase _database;
+  final SynesisDatabase _database;
   final void Function() _notify;
   final Future<int> Function() _countQueuedOutbox;
   final Uuid _uuid = const Uuid();

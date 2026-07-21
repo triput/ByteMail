@@ -7,13 +7,13 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mime/outgoing_envelope.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/outbox/outbox_recipients.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/outbox/outbox_recipients.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

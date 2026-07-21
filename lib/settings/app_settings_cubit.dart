@@ -11,11 +11,11 @@ import 'dart:convert';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/query/message_query.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/query/message_query.dart';
+import 'package:synesis/settings/app_settings_state.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
 import 'package:uuid/uuid.dart';
 
 class AppSettingsCubit extends Cubit<AppSettingsState> {
@@ -23,7 +23,7 @@ class AppSettingsCubit extends Cubit<AppSettingsState> {
     _hydrate();
   }
 
-  static const _key = 'bytemail.app_settings.v1';
+  static const _key = 'synesis.app_settings.v1';
 
   final SharedPreferences _prefs;
   final Uuid _uuid = const Uuid();

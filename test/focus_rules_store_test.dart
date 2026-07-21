@@ -7,15 +7,15 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/database.dart' hide FocusRule;
-import 'package:bytemail/repository/drift_mail_repository.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/database.dart' hide FocusRule;
+import 'package:synesis/repository/drift_mail_repository.dart';
+import 'package:synesis/repository/mail_repository.dart';
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Future<DriftMailRepository> _openTestRepo() async {
-  final ByteMailDatabase database = ByteMailDatabase(NativeDatabase.memory());
+  final SynesisDatabase database = SynesisDatabase(NativeDatabase.memory());
   return DriftMailRepository(database);
 }
 

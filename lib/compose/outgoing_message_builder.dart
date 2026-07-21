@@ -10,11 +10,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bytemail/compose/account_signature.dart';
-import 'package:bytemail/mime/outgoing_envelope.dart';
-import 'package:bytemail/outbox/outbox_recipients.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/ui/compose/compose_draft.dart';
+import 'package:synesis/compose/account_signature.dart';
+import 'package:synesis/mime/outgoing_envelope.dart';
+import 'package:synesis/outbox/outbox_recipients.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/ui/compose/compose_draft.dart';
 
 /// Default outbound HTML font stack (UI-P19).
 const String kOutboundFontFamily =
@@ -143,7 +143,7 @@ class OutgoingMessageBuilder {
   }
 
   static String? _extractStoredHtml(String body) {
-    const String marker = '\n---bytemail-html---\n';
+    const String marker = '\n---synesis-html---\n';
     final int idx = body.indexOf(marker);
     if (idx < 0) {
       return null;
@@ -156,11 +156,11 @@ class OutgoingMessageBuilder {
     if (html == null || html.trim().isEmpty) {
       return plain;
     }
-    return '$plain\n---bytemail-html---\n$html';
+    return '$plain\n---synesis-html---\n$html';
   }
 
   static String unpackPlain(String packed) {
-    const String marker = '\n---bytemail-html---\n';
+    const String marker = '\n---synesis-html---\n';
     final int idx = packed.indexOf(marker);
     if (idx < 0) {
       return packed;

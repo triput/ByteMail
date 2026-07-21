@@ -33,7 +33,7 @@ Before pulling Tier D into a release, score the item:
 
 | Gate | Question |
 | --- | --- |
-| **P1 Dogfood** | Do we need it to use ByteMail daily for mail-only workflows? |
+| **P1 Dogfood** | Do we need it to use Synesis daily for mail-only workflows? |
 | **P2 Architecture** | Does V1 leave a clean extension point (documented in plan)? |
 | **P3 Cost** | Estimate ≤ 2 weeks = V1.1 candidate; > 4 weeks = major version |
 | **P4 Competition** | Are we losing evals without it? |
@@ -207,9 +207,9 @@ Items **already deferred from locked V1** with known hooks. First place to look 
 
 ## 7. TD-D — Collaboration & cloud AI (D4)
 
-**Goal:** Document what ByteMail **chooses not to chase** by default vs optional future.
+**Goal:** Document what Synesis **chooses not to chase** by default vs optional future.
 
-| ID | Feature | Competitor | ByteMail stance |
+| ID | Feature | Competitor | Synesis stance |
 | --- | --- | --- | --- |
 | D4-1 | Copilot / cloud AI draft | Outlook, Spark | **Non-goal** — conflicts with privacy positioning; on-device ML only via Focus seam |
 | D4-2 | On-device ML Focus | Gmail | **Optional** — replace `RuleBasedFocusScorer` behind interface |
@@ -338,7 +338,7 @@ Not a full mail client on the wrist. Target **Samsung Galaxy Watch** (Wear OS) a
 - Runtime: load overrides into the hardware-key handler / intent map used by `mailbox_shortcuts.dart` and `keyboard_intents.dart`.
 - Out of scope for this item: per-account keymaps, chord sequences (multi-key Vim-style), macOS Command remaps until D5 platforms ship.
 
-**V1 hook:** W5 keymap help overlay + `ByteMailKeyboardShortcuts` / `handleMailboxHardwareKey`.  
+**V1 hook:** W5 keymap help overlay + `SynesisKeyboardShortcuts` / `handleMailboxHardwareKey`.  
 **Estimate:** 1–2 weeks  
 **Disposition:** Post-V1 optional; promote if dogfood asks to rebind after the fixed set lands.
 
@@ -350,7 +350,7 @@ Not a full mail client on the wrist. Target **Samsung Galaxy Watch** (Wear OS) a
 | --- | --- | --- |
 | D-G1 | Windows shell widgets | If OS APIs mature (SPEC §12.2) |
 | D-G2 | Wear / Galaxy Watch | Lightweight V2 companion — see TD-E; not phone parity |
-| D-G3 | Share target | “Share to ByteMail” compose from other apps |
+| D-G3 | Share target | “Share to Synesis” compose from other apps |
 | D-G4 | Default mail handler | OS registration as default client |
 | D-G5 | Backup/restore mail DB | User-initiated encrypted backup file |
 
@@ -450,7 +450,7 @@ Items we have **explicitly considered and declined for V1/V2 planning** for now.
 | MS-3 | **Consumer mail merge** | Enterprise-only niche; high complexity | Paying enterprise asks |
 | MS-4 | **Team collaboration** (co-edit drafts, inline comments, read receipts) | Spark territory; needs shared infra | Workplace SKU expands beyond shared mailbox |
 | MS-5 | **Exchange ActiveSync / on-prem without Graph** | Graph is v1 Microsoft path; EAS is legacy burden | Contract requires it |
-| MS-6 | **ByteMail-operated mail hosting** | SPEC non-goal — we are a client | Never (default) |
+| MS-6 | **Synesis-operated mail hosting** | SPEC non-goal — we are a client | Never (default) |
 | MS-7 | **Replace provider web UIs** (files, productivity) | Out of scope — mail client only | Never (default) |
 | MS-8 | **Server-side ranking / cloud Focus** | Focus stays on-device via scorer seam | Strategy reversal |
 | MS-9 | **Windows shell widgets** (full) | OS APIs immature; tray/toast sufficient v1 | Windows platform adds mail widget API |

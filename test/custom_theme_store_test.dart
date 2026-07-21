@@ -7,17 +7,17 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/repository/database.dart' hide CustomTheme;
-import 'package:bytemail/repository/drift_mail_repository.dart';
-import 'package:bytemail/theme/custom_theme.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/repository/database.dart' hide CustomTheme;
+import 'package:synesis/repository/drift_mail_repository.dart';
+import 'package:synesis/theme/custom_theme.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Future<DriftMailRepository> _openTestRepo() async {
-  final ByteMailDatabase database = ByteMailDatabase(NativeDatabase.memory());
+  final SynesisDatabase database = SynesisDatabase(NativeDatabase.memory());
   return DriftMailRepository(database);
 }
 
@@ -108,8 +108,8 @@ void main() {
     });
 
     test('corrupt tokenOverridesJson falls back to an empty override map', () async {
-      final ByteMailDatabase database =
-          ByteMailDatabase(NativeDatabase.memory());
+      final SynesisDatabase database =
+          SynesisDatabase(NativeDatabase.memory());
       final DriftMailRepository repo = DriftMailRepository(database);
       addTearDown(repo.close);
 

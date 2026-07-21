@@ -8,8 +8,8 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/theme/app_theme.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/theme/app_theme.dart';
 
 /// Shows an [AlertDialog] listing [folders] and returns the chosen folder id.
 Future<String?> showMoveFolderDialog(

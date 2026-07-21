@@ -10,15 +10,15 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:bytemail/compose/outgoing_message_builder.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/compose/compose_prefill.dart';
-import 'package:bytemail/ui/compose/compose_sheet.dart';
+import 'package:synesis/compose/outgoing_message_builder.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/compose/compose_prefill.dart';
+import 'package:synesis/ui/compose/compose_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:path/path.dart' as p;

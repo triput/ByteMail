@@ -7,9 +7,9 @@
 // Last Update: 2026-07-14
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/focus/mail_message_draft.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/focus/mail_message_draft.dart';
+import 'package:synesis/repository/mail_repository.dart';
 
 class FocusOverrideRegistry {
   FocusOverrideRegistry({

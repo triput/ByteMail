@@ -13,7 +13,7 @@ import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqlite3/sqlite3.dart';
-import 'package:bytemail/repository/db_encryption_config.dart';
+import 'package:synesis/repository/db_encryption_config.dart';
 
 part 'database.g.dart';
 
@@ -312,10 +312,10 @@ class CustomThemes extends Table {
     CustomThemes,
   ],
 )
-class ByteMailDatabase extends _$ByteMailDatabase {
-  ByteMailDatabase(super.e);
+class SynesisDatabase extends _$SynesisDatabase {
+  SynesisDatabase(super.e);
 
-  factory ByteMailDatabase.open() => ByteMailDatabase(_openConnection());
+  factory SynesisDatabase.open() => SynesisDatabase(_openConnection());
 
   @override
   int get schemaVersion => 6;

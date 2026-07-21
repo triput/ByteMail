@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# ByteMail Quick Start
+# Synesis Quick Start
 
 Get from install to reading mail in a few minutes. For full feature detail see [USER_GUIDE.md](USER_GUIDE.md).
 
@@ -20,13 +20,13 @@ flutter run -d android
 **Microsoft Graph:** pass your Entra app client ID:
 
 ```bash
-flutter run -d windows --dart-define=BYTEMAIL_GRAPH_CLIENT_ID=YOUR_CLIENT_ID
+flutter run -d windows --dart-define=SYNESIS_GRAPH_CLIENT_ID=YOUR_CLIENT_ID
 ```
 
 **Google Gmail:** pass your OAuth client ID (optional secret if required):
 
 ```bash
-flutter run -d windows --dart-define=BYTEMAIL_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
+flutter run -d windows --dart-define=SYNESIS_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID
 ```
 
 Setup steps for Entra and Google: [README.md](../README.md).
@@ -35,7 +35,7 @@ Setup steps for Entra and Google: [README.md](../README.md).
 
 ## 2. Add your first account
 
-1. Launch ByteMail — you should see the **bytemail** wordmark and Data Envelope icon (not the Flutter logo).
+1. Launch Synesis — you should see the **synesis** wordmark and Data Envelope icon (not the Flutter logo).
 2. Tap **Add account** in the title bar.
 3. Pick **Microsoft**, **Google**, or **IMAP / Other** and complete sign-in or server details.
 4. Wait for the first sync — the list fills from the local database; network sync continues in the background.
@@ -75,7 +75,7 @@ Above the message list: tap **Unread**, **Starred**, or **More** for sender/reci
 | Goal | Read |
 | --- | --- |
 | Full user manual | [USER_GUIDE.md](USER_GUIDE.md) |
-| How the code is organized | [DART_IN_BYTEMAIL.md](DART_IN_BYTEMAIL.md) |
+| How the code is organized | [DART_IN_SYNESIS.md](DART_IN_SYNESIS.md) |
 | Product requirements | [SPEC.md](SPEC.md) |
 | Release / wave status | [ROADMAP.md](ROADMAP.md) |
 

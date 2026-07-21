@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/ui/shell/remote_image_policy.dart';
+import 'package:synesis/ui/shell/remote_image_policy.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

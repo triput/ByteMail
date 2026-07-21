@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.bytemail" "\0"
-            VALUE "FileDescription", "bytemail" "\0"
+            VALUE "CompanyName", "net.livebytes" "\0"
+            VALUE "FileDescription", "synesis" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "bytemail" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.bytemail. All rights reserved." "\0"
-            VALUE "OriginalFilename", "bytemail.exe" "\0"
-            VALUE "ProductName", "bytemail" "\0"
+            VALUE "InternalName", "synesis" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 net.livebytes. All rights reserved." "\0"
+            VALUE "OriginalFilename", "synesis.exe" "\0"
+            VALUE "ProductName", "synesis" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

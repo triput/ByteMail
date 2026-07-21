@@ -7,7 +7,7 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/protocol/mail_provider.dart';
+import 'package:synesis/protocol/mail_provider.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

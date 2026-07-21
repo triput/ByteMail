@@ -10,7 +10,7 @@ Future<void> main() is marked async because we must await hardware directories, 
 2. Dependency Injection: 
 
 lib/app.dart
-A central config file containing the root ByteMailApp widget.
+A central config file containing the root SynesisApp widget.
 
 What it does:
 Acts as the dependency injection (DI) layer for the widget tree.
@@ -21,7 +21,7 @@ RepositoryProvider vs BlocProvider: Repositories are for caching and querying da
 3. Database Schema Definition: 
 
 lib/repository/database.dart
-This is where you define how ByteMail stores data locally.
+This is where you define how Synesis stores data locally.
 
 What it does:
 Defines database tables as Dart classes (e.g. class Messages extends Table).
@@ -95,4 +95,4 @@ UI Thread Blockers: Avoid doing heavy computations (JSON decoding, text regex se
 Summary of Work
 Explored Project Workspace: Analyzed directories, packages, and architecture modules to capture complete developer context.
 Reviewed Key Modules: Read and analyzed initialization flow (main.dart and app.dart), Drift DB triggers (database.dart), Façade structures (drift_mail_repository.dart), the sequential worker queue (sync_engine.dart), state managers (mailbox_cubit.dart), and layouts (mail_split_layout.dart).
-Provided Architectural Overview: Prepared a file-by-file walkthrough detailing why each class exists, identifying beginner gotchas, and explaining key Dart/Flutter paradigms used in ByteMail.
+Provided Architectural Overview: Prepared a file-by-file walkthrough detailing why each class exists, identifying beginner gotchas, and explaining key Dart/Flutter paradigms used in Synesis.

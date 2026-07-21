@@ -9,10 +9,10 @@
 
 import 'dart:convert';
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/focus/focus_header_map.dart';
-import 'package:bytemail/repository/database.dart';
-import 'package:bytemail/repository/mail_repository.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/focus/focus_header_map.dart';
+import 'package:synesis/repository/database.dart';
+import 'package:synesis/repository/mail_repository.dart';
 
 MailFolder folderFromRow(Folder row) => MailFolder(
   id: row.id,

@@ -8,9 +8,9 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_tokens.dart';
 
 /// Calm empty surface for list/reading/search/account zero-data states.
 class EmptyState extends StatelessWidget {

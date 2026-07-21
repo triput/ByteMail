@@ -1,4 +1,4 @@
-package com.bytemail.bytemail
+package net.livebytes.synesis
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -13,12 +13,12 @@ import org.json.JSONObject
  * Renders repository snapshots saved by WidgetSnapshotService.
  *
  * The provider reads SharedPreferences directly, so normal widget refreshes do
- * not create a Flutter engine or wake the ByteMail UI isolate.
+ * not create a Flutter engine or wake the Synesis UI isolate.
  *
  * TC-11 (W7): applies theme token colors and Focused/Other unread split from
  * the counter snapshot when present; falls back to the Dark pack defaults.
  */
-class ByteMailWidgetProvider : AppWidgetProvider() {
+class SynesisWidgetProvider : AppWidgetProvider() {
     override fun onUpdate(
         context: Context,
         appWidgetManager: AppWidgetManager,
@@ -31,7 +31,7 @@ class ByteMailWidgetProvider : AppWidgetProvider() {
         val subject = readLatestSubject(context)
         val theme = readTheme(counterJson)
         for (appWidgetId in appWidgetIds) {
-            val views = RemoteViews(context.packageName, R.layout.byte_mail_widget)
+            val views = RemoteViews(context.packageName, R.layout.synesis_widget)
             views.setInt(R.id.widget_root, "setBackgroundColor", theme.ink)
             views.setTextColor(R.id.widget_brand, theme.text)
             val unreadLabel = if (focused + other > 0) {
@@ -127,7 +127,7 @@ class ByteMailWidgetProvider : AppWidgetProvider() {
 
     private fun appIntent(context: Context, action: String): PendingIntent {
         val intent = Intent(context, MainActivity::class.java).apply {
-            putExtra("bytemail_widget_action", action)
+            putExtra("synesis_widget_action", action)
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
         return PendingIntent.getActivity(
@@ -148,7 +148,7 @@ class ByteMailWidgetProvider : AppWidgetProvider() {
     )
 
     private companion object {
-        const val LIST_KEY = "byte_mail_widget.list"
-        const val COUNTER_KEY = "byte_mail_widget.counter"
+        const val LIST_KEY = "synesis_widget.list"
+        const val COUNTER_KEY = "synesis_widget.counter"
     }
 }

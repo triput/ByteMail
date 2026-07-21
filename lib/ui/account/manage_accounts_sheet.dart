@@ -9,14 +9,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/ui/account/add_account_sheet.dart';
-import 'package:bytemail/ui/account/edit_account_sheet.dart';
-import 'package:bytemail/ui/account/remove_account_dialog.dart';
-import 'package:bytemail/ui/common/empty_state.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/ui/account/add_account_sheet.dart';
+import 'package:synesis/ui/account/edit_account_sheet.dart';
+import 'package:synesis/ui/account/remove_account_dialog.dart';
+import 'package:synesis/ui/common/empty_state.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
 
 Future<void> showManageAccountsSheet(BuildContext context) {
   final t = tokensOf(context);

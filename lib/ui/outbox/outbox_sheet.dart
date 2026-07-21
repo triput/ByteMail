@@ -9,14 +9,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/repository/mail_repository.dart';
-import 'package:bytemail/sync/sync_engine.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/outbox/send_error_messages.dart';
-import 'package:bytemail/ui/compose/compose_sheet.dart';
-import 'package:bytemail/ui/mailbox/mailbox_cubit.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/repository/mail_repository.dart';
+import 'package:synesis/sync/sync_engine.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/outbox/send_error_messages.dart';
+import 'package:synesis/ui/compose/compose_sheet.dart';
+import 'package:synesis/ui/mailbox/mailbox_cubit.dart';
 
 /// Opens the outbox inspector so users can see queued/failed sends and act.
 Future<void> showOutboxSheet(BuildContext context) async {

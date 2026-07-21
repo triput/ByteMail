@@ -8,7 +8,7 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
+import 'package:synesis/settings/app_settings_state.dart';
 
 /// Keys used by widget tests to assert pane visibility and axis.
 abstract final class MailSplitLayoutKeys {

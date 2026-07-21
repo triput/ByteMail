@@ -7,7 +7,7 @@
 | Prerequisite | Tier A complete; most items synergize with Tier B |
 | Last updated | 2026-07-17 (W5 desktop UI wiring landed — TC-9 nearly complete) |
 
-Tier C is where ByteMail **wins** against Outlook, Aqua, and Spark for the target audience: privacy-conscious, local-first, technically literate users who want control without cloud AI lock-in.
+Tier C is where Synesis **wins** against Outlook, Aqua, and Spark for the target audience: privacy-conscious, local-first, technically literate users who want control without cloud AI lock-in.
 
 ---
 

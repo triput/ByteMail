@@ -8,12 +8,12 @@
 // ==============================================================================
 
 import 'package:flutter/material.dart';
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/theme_tokens.dart';
-import 'package:bytemail/ui/mailbox/message_body_normalizer.dart';
-import 'package:bytemail/ui/shell/html_email_body.dart';
-import 'package:bytemail/ui/shell/message_body_find.dart';
-import 'package:bytemail/ui/shell/remote_image_policy.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/theme_tokens.dart';
+import 'package:synesis/ui/mailbox/message_body_normalizer.dart';
+import 'package:synesis/ui/shell/html_email_body.dart';
+import 'package:synesis/ui/shell/message_body_find.dart';
+import 'package:synesis/ui/shell/remote_image_policy.dart';
 
 class MessageBodyView extends StatefulWidget {
   const MessageBodyView({

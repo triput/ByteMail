@@ -7,10 +7,10 @@
 // Last Update: 2026-07-18
 // ==============================================================================
 
-import 'package:bytemail/theme/app_theme.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
-import 'package:bytemail/ui/common/empty_state.dart';
+import 'package:synesis/theme/app_theme.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
+import 'package:synesis/ui/common/empty_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

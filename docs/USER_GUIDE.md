@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="branding/branding_logo_lockup_google.png" alt="bytemail" width="360" />
+  <img src="branding/branding_logo_lockup_google.png" alt="synesis" width="360" />
 </p>
 
-# ByteMail User Guide
+# Synesis User Guide
 
-Practical guide to using ByteMail on **Windows** and **Android**. For technical requirements see [SPEC.md](SPEC.md); for release status see [ROADMAP.md](ROADMAP.md).
+Practical guide to using Synesis on **Windows** and **Android**. For technical requirements see [SPEC.md](SPEC.md); for release status see [ROADMAP.md](ROADMAP.md).
 
 **Quick path:** New here? Start with [QUICK_START.md](QUICK_START.md), then return here for detail.
 
@@ -12,7 +12,7 @@ Practical guide to using ByteMail on **Windows** and **Android**. For technical 
 
 ## Accounts
 
-ByteMail supports **Microsoft (Graph)**, **Google (OAuth → Gmail IMAP/SMTP)**, and **IMAP / Other** accounts.
+Synesis supports **Microsoft (Graph)**, **Google (OAuth → Gmail IMAP/SMTP)**, and **IMAP / Other** accounts.
 
 1. Tap **Add account** from the title bar or Appearance settings.
 2. Choose your provider tab and sign in (browser OAuth for Graph/Google) or enter IMAP/SMTP details.
@@ -170,7 +170,7 @@ Account wipe does **not** delete mail on your provider's server.
 
 ## Branding
 
-ByteMail ships the locked **Data Envelope v2** icon and **stealth lowercase `bytemail`** wordmark (gradient amethyst → blue → cyan).
+Synesis ships the locked **Data Envelope v2** icon and **stealth lowercase `synesis`** wordmark (gradient amethyst → blue → cyan).
 
 - **Windows** — taskbar/window `.ico`; wordmark in the title bar
 - **Android** — adaptive launcher, monochrome notification icon, minimal cold-start splash (dismisses on first app frame)
@@ -186,6 +186,6 @@ Details: [branding/README.md](branding/README.md).
 | [QUICK_START.md](QUICK_START.md) | Install → first sync in minutes |
 | [SPEC.md](SPEC.md) | Full product specification |
 | [ROADMAP.md](ROADMAP.md) | Wave status and exit gates |
-| [DART_IN_BYTEMAIL.md](DART_IN_BYTEMAIL.md) | Engineer tour of the codebase |
+| [DART_IN_SYNESIS.md](DART_IN_SYNESIS.md) | Engineer tour of the codebase |
 
 *Maintained by Page. Last updated: 2026-07-18 (Final wave Phase E).*

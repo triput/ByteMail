@@ -1,4 +1,4 @@
-import 'package:bytemail/ui/shell/message_headers_sheet.dart';
+import 'package:synesis/ui/shell/message_headers_sheet.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

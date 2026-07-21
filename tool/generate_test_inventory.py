@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate ByteMail automated test inventory (CSV + XLSX).
+"""Generate Synesis automated test inventory (CSV + XLSX).
 
 Scans test/*_test.dart for test()/testWidgets() cases and emits:
   docs/V1_AUTOMATED_TEST_INVENTORY.csv

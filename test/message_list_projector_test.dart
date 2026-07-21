@@ -7,9 +7,9 @@
 // Last Update: 2026-07-17
 // ==============================================================================
 
-import 'package:bytemail/domain/models.dart';
-import 'package:bytemail/mailbox/message_list_projector.dart';
-import 'package:bytemail/settings/app_settings_state.dart';
+import 'package:synesis/domain/models.dart';
+import 'package:synesis/mailbox/message_list_projector.dart';
+import 'package:synesis/settings/app_settings_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 MailMessage _msg({

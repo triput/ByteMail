@@ -8,9 +8,9 @@
 // ==============================================================================
 
 import 'package:equatable/equatable.dart';
-import 'package:bytemail/domain/saved_message_filter.dart';
-import 'package:bytemail/theme/density.dart';
-import 'package:bytemail/theme/theme_id.dart';
+import 'package:synesis/domain/saved_message_filter.dart';
+import 'package:synesis/theme/density.dart';
+import 'package:synesis/theme/theme_id.dart';
 
 /// Desktop / landscape reading-pane split relative to the message list.
 enum ReadingPanePosition {

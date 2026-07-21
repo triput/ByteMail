@@ -9,9 +9,9 @@
 
 import 'dart:async';
 
-import 'package:bytemail/protocol/imap_smtp_mail_provider.dart';
-import 'package:bytemail/protocol/mail_provider.dart';
-import 'package:bytemail/sync/sync_engine.dart';
+import 'package:synesis/protocol/imap_smtp_mail_provider.dart';
+import 'package:synesis/protocol/mail_provider.dart';
+import 'package:synesis/sync/sync_engine.dart';
 
 /// Manages per-account IMAP IDLE sessions outside short-lived sync jobs.
 class ImapIdleService {
